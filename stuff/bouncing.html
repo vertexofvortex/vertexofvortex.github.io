@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <!-- test branch -->
+        <title>test</title>
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0px;;
+            }
+            
+            #section_1 {
+                width: 100%;
+                min-height: 100px;
+                padding: 300px 0 300px 0;
+            }
+
+            #bouncing {
+                width: 100px;
+                height: 100px;
+                background: red;
+                border-radius: 50px;
+                animation: bouncing 4s infinite ease;
+            }
+
+            @keyframes opacity {
+                0% {opacity: 1;}
+                90% {opacity: 1;}
+                100% {opacity: 0;}
+            }
+
+            @keyframes bouncing {
+                0% {    transform:translateY(-50px);    box-shadow:0px 10px 30px 0px rgba(50, 50, 50, 0.38);}
+                50% {   transform:translateY(50px);     box-shadow:0px 23px 30px 0px rgba(50, 50, 50, 0.38);}
+                100% {  transform:translateY(-50px);    box-shadow:0px 10px 30px 0px rgba(50, 50, 50, 0.38);}
+            }
+
+            @keyframes text {
+                0% {content: " Загрузка параметров...";}
+                20% {content: " 2...";}
+                60% {content: " 3...";}
+            }
+        </style>
+            <section id="section_1">
+                <center><div id="bouncing"></div></center>
+            </section>
+    </body>
+</html>

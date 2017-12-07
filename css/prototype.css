@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Roboto Slab Regular';
+	src: url(../fonts/RobotoSlab-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Roboto Slab Bold';
+	src: url(../fonts/RobotoSlab-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'Roboto Slab Light';
+	src: url(../fonts/RobotoSlab-Light.ttf);
+}
+
+@font-face {
+	font-family: 'Roboto Regular';
+	src: url(../fonts/Roboto-Regular.ttf)
+}
+
+body {
+	background: #000000;
+	margin: 0px;
+}
+
+#logo-wrapper {
+	padding: 150px 0 150px 0;
+}
+
+#logo {
+	width: 80%;
+	height: auto;
+}
+
+#skills {
+	color: white;
+}
+
+h1 {
+	font-size: 44pt;
+	font-family: 'Roboto Slab Bold';
+}
+
+#skills-columns-wrapper {
+	width: 100%;
+	border: none;
+	border-spacing: 0px;
+	margin-bottom: 500px;
+}
+
+.skills-column {
+	align-content: center;
+	font-size: 12pt;
+	font-family: 'Roboto Slab';
+	color: #000000;
+	height: 50px;
+}
+
+#skills-column-design {
+	background: #FFFFFF;
+	width: 75%;
+}
+
+#skills-column-web {
+	background: #D2D2D2;
+	width: 15%;
+}
+
+#skills-column-video {
+	background: #B4B4B4;
+	width: 10%;
+}
