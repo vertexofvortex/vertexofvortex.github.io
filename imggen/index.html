@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>imggen</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/html2canvas.min.js"></script>
+    <script defer src="js/canvas.js"></script>
+    <script defer src="js/create.js"></script>
+</head>
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="description">
+                <p>Этот инструмент позволяет онлайн генерировать баннеры-подписи, которые впоследствии можно установить себе в профиль на форуме.</p>
+                <p>Введите все необходимые данные, нажмите <b>создать</b>, а затем <b>загрузить</b>.</p>
+            </div>
+            <div class="hint">Поле никнейма:</div>
+            <input autofocus type="text" id="nicknamePick" placeholder="Dinnerbone">
+            <div class="hint"><b>Прямая</b> ссылка на фоновое изображение:</div>
+            <input type="text" id="bgurlPick" placeholder="https://photohosting.net/image/sample.jpeg">
+            <div class="hint">Поле раз:</div>
+            <input autofocus type="text" id="" placeholder="Mollit anim nulla ullamco">
+            <div class="hint">Поле два:</div>
+            <input autofocus type="text" id="" placeholder="Dolor amet culpa velit">
+            <div class="hint">Поле три:</div>
+            <input autofocus type="text" id="" placeholder="Velit ullamco aute Lorem adipisicing consectetur">
+            <div id="bottomButtonWrapper">
+                <button class="bottomButton" id="generate">Предпросмотр</button>
+                <button class="bottomButton" id="create">Создать</button>
+                <button class="bottomButton" id="download">Загрузить</button>
+            </div>
+        </section>
+        <section class="preview">
+            <div id="capture">
+                <div id="wrapper">
+                    <div class="left">
+                        <span id="nickname">Никнейм</span>
+                    </div>
+                    <div class="right">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="output">
+            <div id="previewPlaceholder"><p>Нажмите<b> Cоздать изображение</b>, чтобы увидеть его</p></div>
+        </section>
+    </div>
+</body>
