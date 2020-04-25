@@ -5,7 +5,7 @@ function createCanvas() {
     generateCanvas();
     html2canvas(document.querySelector("#capture"), {scale: 1, useCORS: true,}).then(picOutput => {
             var result = document.querySelector(".output");
-            result.innerHTML = "";
+            result.removeChild(document.querySelector("#previewPlaceholder"))
             result.appendChild(picOutput);
     });
 }
