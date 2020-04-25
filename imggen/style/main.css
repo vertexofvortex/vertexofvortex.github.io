@@ -85,6 +85,15 @@ p {
     justify-content: center;
     overflow: hidden;
 }
+#cardsValuesWrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+}
+#cardsValuesWrapper input {
+    margin: 0px;
+}
 .output {
     grid-area: 2 / 2 / 3 / 3;
     background: #202020;
@@ -120,17 +129,31 @@ p {
 }
 #wrapper div.right {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 4fr;
+    grid-template-columns: 1fr 3.5fr 1fr 3.5fr;
     grid-template-rows: 1fr 1fr;
-    gap: 5px;
+    gap: 10px;
 }
 #wrapper div.right .icon {
-    border: 2px solid white;
     padding: 0px;
+    display: flex;
+    align-items: center;
+}
+#wrapper div.right .icon img {
+    width: 100%;
 }
 #wrapper div.right .text {
-    border: 2px solid gray;
     padding: 0px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#wrapper div.right .text .heading {
+    font-weight: 900;
+}
+#wrapper div.right .text .desc {
+    line-height: 14px;
 }
 #nickname {
     color: #fff;

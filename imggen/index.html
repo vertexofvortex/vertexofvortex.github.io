@@ -15,15 +15,20 @@
                 <p>Введите все необходимые данные, нажмите <b>создать</b>, а затем <b>загрузить</b>.</p>
             </div>
             <div class="hint">Поле никнейма:</div>
-            <input autofocus type="text" id="nicknamePick" placeholder="Dinnerbone">
+            <input autofocus type="text" id="nicknamePick" placeholder="введите никнейм для отображения">
             <div class="hint"><b>Прямая</b> ссылка на фоновое изображение:</div>
-            <input type="text" id="bgurlPick" placeholder="https://photohosting.net/image/sample.jpeg">
-            <div class="hint">Поле раз:</div>
-            <input autofocus type="text" id="" placeholder="Mollit anim nulla ullamco">
-            <div class="hint">Поле два:</div>
-            <input autofocus type="text" id="" placeholder="Dolor amet culpa velit">
-            <div class="hint">Поле три:</div>
-            <input autofocus type="text" id="" placeholder="Velit ullamco aute Lorem adipisicing consectetur">
+            <input type="text" id="bgurlPick" placeholder="введите прямую ссылку на фоновое изображение">
+            <div class="hint">Содержимое карточек:</div>
+            <div id="cardsValuesWrapper">
+                <input type="text" id="heading1Pick" placeholder="текст заголовка 1">
+                <input type="text" id="desc1Pick" placeholder="текст пункта">
+                <input type="text" id="heading2Pick" placeholder="текст заголовка 2">
+                <input type="text" id="desc2Pick" placeholder="текст пункта">
+                <input type="text" id="heading3Pick" placeholder="текст заголовка 3">
+                <input type="text" id="desc3Pick" placeholder="текст пункта">
+                <input type="text" id="heading4Pick" placeholder="текст заголовка 4">
+                <input type="text" id="desc4Pick" placeholder="текст пункта">
+            </div>
             <div id="bottomButtonWrapper">
                 <button class="bottomButton" id="generate">Предпросмотр</button>
                 <button class="bottomButton" id="create">Создать</button>
@@ -38,14 +43,26 @@
                         <span id="nickname">Никнейм</span>
                     </div>
                     <div class="right">
-                        <div class="icon"></div>
-                        <div class="text"></div>
-                        <div class="icon"></div>
-                        <div class="text"></div>
-                        <div class="icon"></div>
-                        <div class="text"></div>
-                        <div class="icon"></div>
-                        <div class="text"></div>
+                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon1"></div>
+                        <div class="text">
+                            <span class="heading" id="heading1">ЗАГОЛОВОК 1</span><br>
+                            <span class="desc" id="desc1">Текст пункта</span>
+                        </div>
+                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon2"></div>
+                        <div class="text">
+                            <span class="heading" id="heading2">ЗАГОЛОВОК 2</span><br>
+                            <span class="desc" id="desc2">Текст пункта</span>
+                        </div>
+                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon3"></div>
+                        <div class="text">
+                            <span class="heading" id="heading3">ЗАГОЛОВОК 3</span><br>
+                            <span class="desc" id="desc3">Текст пункта</span>
+                        </div>
+                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon4"></div>
+                        <div class="text">
+                            <span class="heading" id="heading4">ЗАГОЛОВОК 4</span><br>
+                            <span class="desc" id="desc4">Текст пункта</span>
+                        </div>
                     </div>
                 </div>
             </div>
