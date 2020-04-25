@@ -2,6 +2,9 @@ body {
     font-family: "Manrope", sans-serif;
     margin: 0px;
 }
+* {
+    outline: none;
+}
 .container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
