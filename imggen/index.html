@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="utf-8">
     <title>imggen</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="js/html2canvas.min.js"></script>
+    <script src="js/FileSaver.js"></script>
     <script defer src="js/canvas.js"></script>
-    <script defer src="js/create.js"></script>
+    <script src="https://kit.fontawesome.com/261c9886ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--<div class="notification"></div>-->
     <div class="container">
         <section class="sidebar">
             <div class="description">
-                <p>Этот инструмент позволяет онлайн генерировать баннеры-подписи, которые впоследствии можно установить себе в профиль на форуме.</p>
-                <p>Введите все необходимые данные, нажмите <b>создать</b>, а затем <b>загрузить</b>.</p>
+                <p>Этот инструмент позволяет онлайн генерировать баннеры-подписи, которые впоследствии можно установить себе в профиль на форуме. Быстро и просто.</p>
+                <p>Введите все необходимые данные, нажмите <b>создать</b>, а затем <b>загрузить</b>. Можно оставить пункты незаполненными, таким образом скрыв их отображение.</p>
+                <p>Фоновые изображения отлично подходят с сайта <a href="https://unsplash.com" target="_blank">unsplash.com</a>.</p>
             </div>
             <div class="hint">Поле никнейма:</div>
             <input autofocus type="text" id="nicknamePick" placeholder="введите никнейм для отображения">
-            <div class="hint"><b>Прямая</b> ссылка на фоновое изображение:</div>
-            <input type="text" id="bgurlPick" placeholder="введите прямую ссылку на фоновое изображение">
-            <div class="hint">Содержимое карточек:</div>
+            <div class="hint">Укажите <b>прямую</b> ссылку на фоновое изображение или выберите файл:</div>
+            <input type="text" id="bgurlPick" style="margin-bottom: 5px;" placeholder="введите прямую ссылку на фоновое изображение">
+            <input type="file" accept="image/*" id="imgpickCapture">
+            <div class="hint">Содержимое пунктов описания:</div>
             <div id="cardsValuesWrapper">
                 <input type="text" id="heading1Pick" placeholder="текст заголовка 1">
                 <input type="text" id="desc1Pick" placeholder="текст пункта">
@@ -29,10 +34,19 @@
                 <input type="text" id="heading4Pick" placeholder="текст заголовка 4">
                 <input type="text" id="desc4Pick" placeholder="текст пункта">
             </div>
+            <div class="hint">Загрузите изображения иконок:</div>
+            <div id="iconsValuesWrapper">
+                <input type="file" accept="image/*"  id="imgpickIcon1">
+                <input type="file" accept="image/*"  id="imgpickIcon2">
+                <input type="file" accept="image/*"  id="imgpickIcon3">
+                <input type="file" accept="image/*"  id="imgpickIcon4"><!---->
+            </div>
+            <div class="hint">Название файла <b>(без расширения)</b>:</div>
+            <input type="text" id="canvasName" placeholder="generated-banner">
             <div id="bottomButtonWrapper">
-                <button class="bottomButton" id="generate">Предпросмотр</button>
-                <button class="bottomButton" id="create">Создать</button>
-                <button class="bottomButton" id="download">Загрузить</button>
+                <button class="bottomButton" id="generate"><span><i class="fas fa-plus"></i> Предпросмотр</span></button>
+                <button class="bottomButton" id="create"><span><i class="fas fa-image"></i> Создать</span></button>
+                <button class="bottomButton" id="download"><span><i class="fas fa-download"></i> Загрузить</span></button>
             </div>
         </section>
         <section class="preview">
@@ -43,22 +57,22 @@
                         <span id="nickname">Никнейм</span>
                     </div>
                     <div class="right">
-                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon1"></div>
+                        <div class="icon"><div id="icon1"></div></div>
                         <div class="text">
                             <span class="heading" id="heading1">ЗАГОЛОВОК 1</span><br>
                             <span class="desc" id="desc1">Текст пункта</span>
                         </div>
-                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon2"></div>
+                        <div class="icon"><div id="icon2"></div></div>
                         <div class="text">
                             <span class="heading" id="heading2">ЗАГОЛОВОК 2</span><br>
                             <span class="desc" id="desc2">Текст пункта</span>
                         </div>
-                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon3"></div>
+                        <div class="icon"><div id="icon3"></div></div>
                         <div class="text">
                             <span class="heading" id="heading3">ЗАГОЛОВОК 3</span><br>
                             <span class="desc" id="desc3">Текст пункта</span>
                         </div>
-                        <div class="icon"><img src="https://raw.githubusercontent.com/vertexofvortex/vertexofvortex.github.io/master/minecorp/images/placeholder.png" id="icon4"></div>
+                        <div class="icon"><div id="icon4"></div></div>
                         <div class="text">
                             <span class="heading" id="heading4">ЗАГОЛОВОК 4</span><br>
                             <span class="desc" id="desc4">Текст пункта</span>
