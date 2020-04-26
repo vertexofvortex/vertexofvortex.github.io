@@ -3,9 +3,10 @@ document.getElementById("create").onclick = createCanvas;
 document.getElementById("download").onclick = downloadCanvas;
 
 function createCanvas() {
+    var scale = document.getElementById("scalePick").value;
     var result = document.querySelector(".output");
     var infoline = document.querySelectorAll(".infoline")[1];
-    html2canvas(document.querySelector("#capture"), {scale: 1, useCORS: true,}).then(picOutput => {
+    html2canvas(document.querySelector("#capture"), {scale: scale, useCORS: true,}).then(picOutput => {
         result.innerHTML = "";
         result.appendChild(infoline);
         result.appendChild(picOutput);
