@@ -1,0 +1,14 @@
+@media screen and (max-width: 1100px) {
+    .container {
+        display: block;
+    }
+    .sidebar {
+    
+    }
+    .preview {
+        height: 40vh;
+    }
+    .output {
+        height: 40vh;
+    }
+}

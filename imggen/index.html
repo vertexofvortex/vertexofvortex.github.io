@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title>imggen</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/adaptive.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="js/html2canvas.min.js"></script>
     <script src="js/FileSaver.js"></script>
@@ -10,7 +11,7 @@
     <script src="https://kit.fontawesome.com/261c9886ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--<div class="notification"></div>-->
+    <div class="notification"></div>
     <div class="container">
         <section class="sidebar">
             <div class="description">
@@ -36,13 +37,20 @@
             </div>
             <div class="hint">Загрузите изображения иконок:</div>
             <div id="iconsValuesWrapper">
-                <input type="file" accept="image/*"  id="imgpickIcon1">
-                <input type="file" accept="image/*"  id="imgpickIcon2">
-                <input type="file" accept="image/*"  id="imgpickIcon3">
-                <input type="file" accept="image/*"  id="imgpickIcon4"><!---->
+                <input type="file" accept="image/*" id="imgpickIcon1">
+                <input type="file" accept="image/*" id="imgpickIcon2">
+                <input type="file" accept="image/*" id="imgpickIcon3">
+                <input type="file" accept="image/*" id="imgpickIcon4">
+            </div>
+            <div class="hint"><input type="checkbox">Указать названия иконок FontAwesome:</div>
+            <div id="iconsFAValues">
+                <input type="text" class="FAicon" id="FApickIcon1" placeholder="иконка заголовка 1">
+                <input type="text" class="FAicon" id="FApickIcon2" placeholder="иконка заголовка 2">
+                <input type="text" class="FAicon" id="FApickIcon3" placeholder="иконка заголовка 3">
+                <input type="text" class="FAicon" id="FApickIcon4" placeholder="иконка заголовка 4">
             </div>
             <div class="hint">Масштаб:</div>
-            <input autofocus type="number" min="1" max="5" id="scalePick" placeholder="число">
+            <input autofocus value="1" type="number" min="1" max="5" id="scalePick" placeholder="число">
             <div class="hint">Название файла <b>(без расширения)</b>:</div>
             <input type="text" id="canvasName" placeholder="generated-banner">
             <div id="bottomButtonWrapper">
