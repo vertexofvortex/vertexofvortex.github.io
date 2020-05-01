@@ -36,7 +36,8 @@ function create() {
             result.appendChild(infoline);
             placeholder.innerHTML = "Произошла непредвиденная ошибка. Помолитесь.";
             result.appendChild(placeholder);
-        });
+    });
+    notify("Изображение успешно сгенерировано!");
 }
 function downloadCanvas() {
     var img = document.querySelector("#canvas");
@@ -49,6 +50,7 @@ function downloadCanvas() {
     }
     var name = nameValue + ".png";
     saveAs(img.src, name);
+    notify("Вы загрузили изображение с именем " + name + ".");
 }
 function fillCanvas() {
     var nickname = document.querySelector("#nicknamePick");
@@ -107,13 +109,12 @@ function sleep(milliseconds) {
 }
 
 function notify(text = "notification") {
-    body = document.querySelector("body");
-    bar = document.createElement("div");
-    bar.innerHTML = "text";
-    body.insertAdjacentElement("afterbegin", bar)
-    bar.style.cssText = "height: 100px; transition: 1s ease-in-out";
-    sleep(2000);
-    bar.style.cssText = "display: none";
+    bar = document.querySelector(".notification");
+    bar.innerHTML = text;
+    bar.style.top = "0px";
+    setTimeout(function() {
+        bar.style.top = "-100%";
+    }, 3000);
 }
 function iconToFA() {
     var index = 0;
