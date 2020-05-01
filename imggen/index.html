@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style/adaptive.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="js/html2canvas.min.js"></script>
+    <script src="js/dom-to-image.js"></script>
     <script src="js/FileSaver.js"></script>
     <script defer src="js/canvas.js"></script>
     <script src="https://kit.fontawesome.com/261c9886ff.js" crossorigin="anonymous"></script>
@@ -42,7 +43,7 @@
                 <input type="file" accept="image/*" id="imgpickIcon3">
                 <input type="file" accept="image/*" id="imgpickIcon4">
             </div>
-            <div class="hint"><input type="checkbox">Указать названия иконок FontAwesome:</div>
+            <div class="hint"><label for="FAswitch"></label><input type="checkbox" id="FAswitch" onchange="iconToFAopacity()">Указать названия бесплатных иконок <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome:</a></label></div>
             <div id="iconsFAValues">
                 <input type="text" class="FAicon" id="FApickIcon1" placeholder="иконка заголовка 1">
                 <input type="text" class="FAicon" id="FApickIcon2" placeholder="иконка заголовка 2">

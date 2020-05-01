@@ -1,8 +1,9 @@
 document.getElementById("generate").onclick = fillCanvas;
-document.getElementById("create").onclick = createCanvas;
+document.getElementById("create").onclick = create;
 document.getElementById("download").onclick = downloadCanvas;
+onload = iconToFAopacity;
 var placeholder = document.getElementById("previewPlaceholder");
-function createCanvas() {
+/*function createCanvas() {
     var scale = document.getElementById("scalePick").value;
     var result = document.querySelector(".output");
     var infoline = document.querySelectorAll(".infoline")[1];
@@ -17,20 +18,39 @@ function createCanvas() {
         }
         result.appendChild(infoline);
     });
+}*/
+function create() {
+    var result = document.querySelector(".output");
+    var infoline = document.querySelectorAll(".infoline")[1];
+    var node = document.getElementById("capture");
+    domtoimage.toPng(node)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            result.innerHTML = "";
+            result.appendChild(img);
+            img.id = "canvas";
+            result.appendChild(infoline);
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
 }
 function downloadCanvas() {
-    var canvas = document.querySelector("#canvas");
+    var img = document.querySelector("#canvas");
     var nameValue = document.querySelector("#canvasName").value;
     if (nameValue === "") {
         nameValue = "generated-banner";
     }
-    if (canvas === null) {
-        alert("Изображение не сгенерировано. Нажмите \"Создать\",.");
+    if (img === null) {
+        alert("Изображение не сгенерировано. Нажмите \"Создать\".");
     }
     var name = nameValue + ".png";
-    canvas.toBlob(function(blob) {
-    saveAs(blob, name);
-});
+    var file = new FileSaver(["Hello, world!"], "hello world.txt", {type: "text/plain;charset=utf-8"});
+    FileSaver.saveAs(img.src);
+    /*img.toBlob(function(blob) {
+        saveAs(blob, name);
+    });*/
 }
 
 function fillCanvas() {
@@ -57,8 +77,8 @@ function fillCanvas() {
         text = document.querySelector(selectorTextPick);
         document.querySelector(selectorText).innerHTML = text.value;
     }
-    imgUpload();
     iconToFA();
+    imgUpload();
 }
 function imgUpload() {
     var index = 0;
@@ -68,6 +88,7 @@ function imgUpload() {
         let elemId = id.substr(7).toLowerCase();
         let element = document.getElementById(elemId);
         index++;
+        var check = document.querySelectorAll("input[type=\"file\"]")[index];
         let file = input.files[0];
         if (file === undefined) {
             continue;
@@ -77,11 +98,8 @@ function imgUpload() {
         reader.onload = function() {
             element.style.backgroundImage = "url(" + reader.result + ")";
         }
-    } while (input != undefined);
-}
-
-function showMenu(title = "Без заголовка", width = 100, height = 200) {
-    alert(title + ' ' + width + ' ' + height);
+        console.log(check);
+    } while (check != undefined);
 }
 
 function sleep(milliseconds) {
@@ -104,6 +122,55 @@ function notify(text = "notification") {
 
 function iconToFA() {
     var index = 0;
+    var checkbox = document.querySelector("#FAswitch");
+    if (checkbox.checked) {
+        do {
+            var input = document.querySelectorAll("input.FAicon")[index],
+            elementId = input.id.substr(6).toLowerCase(),
+            element = document.getElementById(elementId);
+            console.log(input, element);
+            var check = document.querySelectorAll("input.FAicon")[index + 1];
+            index++;
+            
+            var icon = document.createElement("i");
+            icon.id = elementId;
+            icon.className = "fas fa-" + input.value;
+            element.replaceWith(icon);
+        } while (check != undefined);
+        console.log("div > svg");
+    } else {
+        do {
+            var input = document.querySelectorAll("input.FAicon")[index];
+            index++;
+            var element = document.querySelector("#icon" + index),
+            check = document.querySelectorAll("input.FAicon")[index];
+            console.log(index, element);
+            
+            var div = document.createElement("div");
+            div.id = element.id;
+            element.replaceWith(div);
+        } while  (check != undefined);
+    }
+}
+
+function iconToFAopacity() {
+    var index = 0;
+    checkbox = document.querySelector("#FAswitch");
+    do {
+        var input = document.querySelectorAll("input.FAicon")[index];
+        if (checkbox.checked) {
+            input.style.opacity = 1;
+            input.disabled = false;
+        } else {
+            input.style.opacity = 0.5;
+            input.disabled = true;
+        }
+        check = document.querySelectorAll("input.FAicon")[index + 1];
+        index++;
+    } while (check != undefined);
+}
+/*function test() {
+    var index = 0;
     do {
         var input = document.querySelectorAll("input.FAicon")[index];
         let id = input.id;
@@ -111,9 +178,6 @@ function iconToFA() {
         var element = document.getElementById(elemId);
         console.log(input, elemId);
         index++;
-
-        let icon = document.createElement("i");
-        icon.className = "fas fa-" + input.value;
-        element.replaceWith(icon);
-    } while (input != undefined);
-}
+        var check = document.querySelectorAll("input.FAicon")[index];
+    } while (check != undefined);
+}*/

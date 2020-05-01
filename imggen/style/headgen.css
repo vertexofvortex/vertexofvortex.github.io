@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#capture {
+    width: 851px;
+    height: 200px;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

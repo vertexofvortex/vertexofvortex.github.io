@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>BURROUGHS</title>
+</head>
+<body>
+    <div>
+        <span id="line1"> ________  ___  ___  ________  ________  ________  ___  ___  ________  ___  ___  ________      </span><br>
+        <span id="line2">|\   __  \|\  \|\  \|\   __  \|\   __  \|\   __  \|\  \|\  \|\   ____\|\  \|\  \|\   ____\     </span><br>
+        <span id="line3">\ \  \|\ /\ \  \\\  \ \  \|\  \ \  \|\  \ \  \|\  \ \  \\\  \ \  \___|\ \  \\\  \ \  \___|_    </span><br>
+        <span id="line4"> \ \   __  \ \  \\\  \ \   _  _\ \   _  _\ \  \\\  \ \  \\\  \ \  \  __\ \   __  \ \_____  \   </span><br>
+        <span id="line5">  \ \  \|\  \ \  \\\  \ \  \\  \\ \  \\  \\ \  \\\  \ \  \\\  \ \  \|\  \ \  \ \  \|____|\  \  </span><br>
+        <span id="line6">   \ \_______\ \_______\ \__\\ _\\ \__\\ _\\ \_______\ \_______\ \_______\ \__\ \__\____\_\  \ </span><br>
+        <span id="line7">    \|_______|\|_______|\|__|\|__|\|__|\|__|\|_______|\|_______|\|_______|\|__|\|__|\_________\</span><br>
+        <span id="line8">                                                                                   \|_________|</span><br>
+    </div>
+    
+    <style>
+        body {
+            background: #000;
+            margin: 0px;
+            font-family: "Consolas", monospace;
+            color: #0dff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1vw;
+            line-height: 1.1vw;
+        }
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+        span {
+            white-space: pre;
+            animation: 3s anim steps(2) infinite;
+        }
+        #line1 {animation-delay: 0.1s;}
+        #line2 {animation-delay: 0.2s;}
+        #line3 {animation-delay: 0.3s;}
+        #line4 {animation-delay: 0.4s;}
+        #line5 {animation-delay: 0.5s;}
+        #line6 {animation-delay: 0.6s;}
+        #line7 {animation-delay: 0.7s;}
+        #line8 {animation-delay: 0.8s;}
+
+        @keyframes anim {
+            0% {opacity: 0}
+            30% {opacity: 1}
+            60% {opacity: 0}
+            100% {opacity: 1}
+        }
+    </style>
+</body>

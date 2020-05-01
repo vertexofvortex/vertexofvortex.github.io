@@ -10,9 +10,8 @@ a {
     text-decoration: none;
     border-bottom: 1px solid #46d83f;
 }
-#capture i.fas {
-    color: #fff;
-    font-size: 140%;
+#capture path {
+    fill: #fff;
 }
 .notification {
     position: absolute;
@@ -91,6 +90,7 @@ p {
 #iconsFAValues input {
     margin-bottom: 5px;
     height: 40px;
+    opacity: 0.5;
 }
 #canvasName {
     margin-left: -10px;
@@ -159,7 +159,7 @@ p {
     justify-content: center;
     overflow: hidden;
 }
-.output canvas {
+.output #canvas {
     animation: 0.5s appear ease-in-out;
 }
 #capture {
@@ -198,12 +198,13 @@ p {
     display: flex;
     align-items: center;
 }
-#wrapper div.right .icon div {
+#wrapper div.right .icon div,
+#wrapper div.right .icon svg {
     width: 100%;
     height: 40px;
     background-image: unset;
     background-position: center;
-    background-size: 90%;
+    background-size: 80%;
     background-repeat: no-repeat;
     padding: 0px;
 }
