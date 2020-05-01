@@ -48,11 +48,7 @@ function downloadCanvas() {
         alert("Изображение не сгенерировано. Нажмите \"Создать\".");
     }
     var name = nameValue + ".png";
-    var file = new FileSaver(["Hello, world!"], "hello world.txt", {type: "text/plain;charset=utf-8"});
-    FileSaver.saveAs(img.src);
-    img.toBlob(function(blob) {
-        saveAs(blob, name);
-    });
+    saveAs(img.src, name);
 }
 function fillCanvas() {
     var nickname = document.querySelector("#nicknamePick");

@@ -1,20 +1,26 @@
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 900px) {
     .container {
         display: block;
     }
     .sidebar {
     
     }
-    .preview {
-        height: 30vh;
-    }
-    .output {
-        height: 30vh;
+    .preview, .output {
+        height: max-content;
+        display: block;
     }
     .preview, .output {
         overflow-x: scroll;
     }
     .infoline {
         display: none;
+    }
+    .sidebar #bottomButtonWrapper, #canvasName {
+        display: block;
+        margin: 0px;
+        width: 100%;
+    }
+    .sidebar #bottomButtonWrapper button {
+        width: 100%;
     }
 }
