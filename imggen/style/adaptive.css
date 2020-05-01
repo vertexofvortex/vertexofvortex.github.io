@@ -6,9 +6,15 @@
     
     }
     .preview {
-        height: 40vh;
+        height: 30vh;
     }
     .output {
-        height: 40vh;
+        height: 30vh;
+    }
+    .preview, .output {
+        overflow-x: scroll;
+    }
+    .infoline {
+        display: none;
     }
 }

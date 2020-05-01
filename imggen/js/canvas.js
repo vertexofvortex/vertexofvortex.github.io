@@ -2,7 +2,6 @@ document.getElementById("generate").onclick = fillCanvas;
 document.getElementById("create").onclick = create;
 document.getElementById("download").onclick = downloadCanvas;
 onload = iconToFAopacity;
-var placeholder = document.getElementById("previewPlaceholder");
 /*function createCanvas() {
     var scale = document.getElementById("scalePick").value;
     var result = document.querySelector(".output");
@@ -20,20 +19,23 @@ var placeholder = document.getElementById("previewPlaceholder");
     });
 }*/
 function create() {
-    var result = document.querySelector(".output");
-    var infoline = document.querySelectorAll(".infoline")[1];
-    var node = document.getElementById("capture");
-    domtoimage.toPng(node)
-        .then(function (dataUrl) {
+    var result = document.querySelector(".output"),
+    infoline = document.querySelectorAll(".infoline")[1],
+    node = document.getElementById("capture"),
+    placeholder = document.getElementById("previewPlaceholder");
+
+    domtoimage.toPng(node).then(function (dataUrl) {
             var img = new Image();
             img.src = dataUrl;
             result.innerHTML = "";
             result.appendChild(img);
             img.id = "canvas";
             result.appendChild(infoline);
-        })
-        .catch(function (error) {
-            console.error('oops, something went wrong!', error);
+        }).catch(function (error) {
+            result.innerHTML = "";
+            result.appendChild(infoline);
+            placeholder.innerHTML = "Произошла непредвиденная ошибка. Помолитесь.";
+            result.appendChild(placeholder);
         });
 }
 function downloadCanvas() {
@@ -48,11 +50,10 @@ function downloadCanvas() {
     var name = nameValue + ".png";
     var file = new FileSaver(["Hello, world!"], "hello world.txt", {type: "text/plain;charset=utf-8"});
     FileSaver.saveAs(img.src);
-    /*img.toBlob(function(blob) {
+    img.toBlob(function(blob) {
         saveAs(blob, name);
-    });*/
+    });
 }
-
 function fillCanvas() {
     var nickname = document.querySelector("#nicknamePick");
     document.querySelector("span#nickname").innerHTML = nickname.value;
@@ -101,7 +102,6 @@ function imgUpload() {
         console.log(check);
     } while (check != undefined);
 }
-
 function sleep(milliseconds) {
     const date = Date.now();
     let currentDate = null;
@@ -119,7 +119,6 @@ function notify(text = "notification") {
     sleep(2000);
     bar.style.cssText = "display: none";
 }
-
 function iconToFA() {
     var index = 0;
     var checkbox = document.querySelector("#FAswitch");
@@ -134,10 +133,12 @@ function iconToFA() {
             
             var icon = document.createElement("i");
             icon.id = elementId;
-            icon.className = "fas fa-" + input.value;
+            icon.className = input.value;
+            if (input.value == "") {
+                icon.className = "empty";
+            }
             element.replaceWith(icon);
         } while (check != undefined);
-        console.log("div > svg");
     } else {
         do {
             var input = document.querySelectorAll("input.FAicon")[index];
@@ -152,7 +153,6 @@ function iconToFA() {
         } while  (check != undefined);
     }
 }
-
 function iconToFAopacity() {
     var index = 0;
     checkbox = document.querySelector("#FAswitch");
@@ -169,15 +169,4 @@ function iconToFAopacity() {
         index++;
     } while (check != undefined);
 }
-/*function test() {
-    var index = 0;
-    do {
-        var input = document.querySelectorAll("input.FAicon")[index];
-        let id = input.id;
-        var elemId = id.substr(6).toLowerCase();
-        var element = document.getElementById(elemId);
-        console.log(input, elemId);
-        index++;
-        var check = document.querySelectorAll("input.FAicon")[index];
-    } while (check != undefined);
-}*/
+/*семь бед, один ответ - костыль и велосипед*/

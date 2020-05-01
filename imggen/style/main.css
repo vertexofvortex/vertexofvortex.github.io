@@ -10,6 +10,9 @@ a {
     text-decoration: none;
     border-bottom: 1px solid #46d83f;
 }
+label, input[type="checkbox"] {
+    cursor: pointer;
+}
 #capture path {
     fill: #fff;
 }
@@ -85,7 +88,7 @@ p {
     margin: 0px;
 }
 #iconsFAValues {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 #iconsFAValues input {
     margin-bottom: 5px;
@@ -170,7 +173,7 @@ p {
     background-color: #303030;
     background-image: unset;
 }
-#capture, .output canvas, #previewPlaceholder {
+#capture, .output #canvas, #previewPlaceholder {
     min-width: 850px;
 }
 #wrapper {
@@ -198,8 +201,7 @@ p {
     display: flex;
     align-items: center;
 }
-#wrapper div.right .icon div,
-#wrapper div.right .icon svg {
+#wrapper div.right .icon div {
     width: 100%;
     height: 40px;
     background-image: unset;
@@ -207,6 +209,10 @@ p {
     background-size: 80%;
     background-repeat: no-repeat;
     padding: 0px;
+}
+#wrapper div.right .icon svg {
+    width: 100%;
+    height: 25px;
 }
 #wrapper div.right .text {
     padding: 0px;
@@ -241,7 +247,7 @@ p {
 }
 .preview, .output {
     position: relative;
-    overflow: hidden;
+    padding: 10px;
 }
 .infoline {
     position: absolute;
