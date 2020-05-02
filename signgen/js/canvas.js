@@ -2,6 +2,8 @@ document.getElementById("generate").onclick = fillCanvas;
 document.getElementById("create").onclick = create;
 document.getElementById("download").onclick = downloadCanvas;
 onload = iconToFAopacity;
+onload = bgOpacityDisplay;
+onload = bgOpacityReset;
 /*function createCanvas() {
     var scale = document.getElementById("scalePick").value;
     var result = document.querySelector(".output");
@@ -46,7 +48,7 @@ function downloadCanvas() {
         nameValue = "generated-banner";
     }
     if (img === null) {
-        alert("Изображение не сгенерировано. Нажмите \"Создать\".");
+        notify("Изображение не сгенерировано. Нажмите \"Создать\".");
     }
     var name = nameValue + ".png";
     saveAs(img.src, name);
@@ -76,6 +78,7 @@ function fillCanvas() {
         text = document.querySelector(selectorTextPick);
         document.querySelector(selectorText).innerHTML = text.value;
     }
+    bgOpacity();
     iconToFA();
     imgUpload();
 }
@@ -165,5 +168,18 @@ function iconToFAopacity() {
         check = document.querySelectorAll("input.FAicon")[index + 1];
         index++;
     } while (check != undefined);
+}
+function bgOpacity() {
+    var input = document.querySelector("input#bgOpacity"); 
+    document.querySelector("#wrapper").style.backgroundColor = "rgba(0, 0, 0, " + input.value / 100 + ")";
+}
+function bgOpacityDisplay() {
+    var input = document.querySelector("input#bgOpacity"); 
+    document.querySelector("#bgOpacityPercentage").innerHTML = input.value;
+}
+function bgOpacityReset() {
+    var input = document.querySelector("input#bgOpacity");
+    input.value = "65";
+    bgOpacityDisplay();
 }
 /*семь бед, один ответ - костыль и велосипед*/

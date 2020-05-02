@@ -9,9 +9,18 @@ a {
     color: #46d83f;
     text-decoration: none;
     border-bottom: 1px solid #46d83f;
+    cursor: pointer;
+}
+input {
+    display: block;
 }
 label, input[type="checkbox"] {
     cursor: pointer;
+}
+input[type="range"] {
+    cursor: e-resize;
+    margin: 0px;
+    background: transparent;
 }
 #capture path {
     fill: #fff;
@@ -42,13 +51,23 @@ p {
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
     background: #303030;
-    position: relative;
     padding: 10px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .sidebar .description {
     padding: 10px;
     color: #fff;
+}
+.sidebar .logo {
+    padding: 20px;
+    background: #242424;
+    margin-left: -20px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+    top: -100%;
 }
 .sidebar .hint {
     padding: 5px;
@@ -56,6 +75,14 @@ p {
     padding-left: 10px;
     color: #fff;
     font-size: 14px;
+}
+.sidebar .hint.bgOpacity {
+    background: #242424;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
 }
 .sidebar input {
     width: 100%;

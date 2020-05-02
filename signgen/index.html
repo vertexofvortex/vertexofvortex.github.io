@@ -5,6 +5,7 @@
     <title>imggen</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/adaptive.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="js/html2canvas.min.js"></script>
     <script src="js/dom-to-image.js"></script>
@@ -17,6 +18,9 @@
     <div class="container">
         <section class="sidebar">
             <div class="description">
+                <div class="logo">
+                    <img src="images/logo.svg">
+                </div>
                 <p>Этот инструмент позволяет онлайн генерировать баннеры-подписи, которые впоследствии можно установить себе в профиль на форуме. Быстро и просто.</p>
                 <p>Введите все необходимые данные, нажмите <b>создать</b>, а затем <b>загрузить</b>. Можно оставить пункты незаполненными, таким образом скрыв их отображение.</p>
                 <p>Фоновые изображения отлично подходят с сайта <a href="https://unsplash.com" target="_blank">unsplash.com</a>.</p>
@@ -26,6 +30,11 @@
             <div class="hint">Укажите <b>прямую</b> ссылку на фоновое изображение или выберите файл:</div>
             <input type="text" id="bgurlPick" style="margin-bottom: 5px;" placeholder="введите прямую ссылку на фоновое изображение">
             <input type="file" accept="image/*" id="imgpickCapture">
+            <div class="hint">Степень затемнения фона:</div>
+            <input type="range" id="bgOpacity" min="0" max="100" step="5" onchange="bgOpacityDisplay()" style="margin-bottom: 5px">
+            <div class="hint bgOpacity">
+                <div>Текущая: <span id="bgOpacityPercentage"></span>%</div> <div><a onclick="bgOpacityReset()" id="bgOpacity" style="border: 0px;"><i class="fas fa-redo-alt"></i> Сбросить</a></div>
+            </div>
             <div class="hint">Содержимое пунктов описания:</div>
             <div id="cardsValuesWrapper">
                 <input type="text" id="heading1Pick" placeholder="текст заголовка 1">
@@ -57,7 +66,8 @@
             </div>
             <!--<div class="hint">Масштаб:</div>
             <input autofocus value="1" type="number" min="1" max="5" id="scalePick" placeholder="число">-->
-            <div class="hint">Название файла <b>(без расширения)</b>:</div>
+            <div class="hint" style="background: #242424; padding-top: 5px; padding-bottom: 5px;;; margin-bottom: 10px; border: 1px solid #46d83f;">По некоторым причинам в Chrome пока что не работает кнопка сохранения изображения. Воспользуйтесь <b>Сохранить изображение как...</b> (ПКМ по картинке).</div>
+            <div class="hint">Название файла <b>без расширения</b>:</div>
             <input type="text" id="canvasName" placeholder="generated-banner">
             <div id="bottomButtonWrapper">
                 <button class="bottomButton" id="generate"><span><i class="fas fa-plus"></i> Предпросмотр</span></button>
@@ -75,22 +85,22 @@
                     <div class="right">
                         <div class="icon"><div id="icon1"></div></div>
                         <div class="text">
-                            <span class="heading" id="heading1">ЗАГОЛОВОК 1</span><br>
+                            <span class="heading" id="heading1">ЗАГОЛОВОК 1</span>
                             <span class="desc" id="desc1">Текст пункта</span>
                         </div>
                         <div class="icon"><div id="icon2"></div></div>
                         <div class="text">
-                            <span class="heading" id="heading2">ЗАГОЛОВОК 2</span><br>
+                            <span class="heading" id="heading2">ЗАГОЛОВОК 2</span>
                             <span class="desc" id="desc2">Текст пункта</span>
                         </div>
                         <div class="icon"><div id="icon3"></div></div>
                         <div class="text">
-                            <span class="heading" id="heading3">ЗАГОЛОВОК 3</span><br>
+                            <span class="heading" id="heading3">ЗАГОЛОВОК 3</span>
                             <span class="desc" id="desc3">Текст пункта</span>
                         </div>
                         <div class="icon"><div id="icon4"></div></div>
                         <div class="text">
-                            <span class="heading" id="heading4">ЗАГОЛОВОК 4</span><br>
+                            <span class="heading" id="heading4">ЗАГОЛОВОК 4</span>
                             <span class="desc" id="desc4">Текст пункта</span>
                         </div>
                     </div>

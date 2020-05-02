@@ -23,4 +23,7 @@
     .sidebar #bottomButtonWrapper button {
         width: 100%;
     }
+    .sidebar .bottomButton {
+        height: 40px;
+    }
 }
