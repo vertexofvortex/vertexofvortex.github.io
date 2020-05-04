@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>imggen</title>
+    <title>SIGNGEN</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/adaptive.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -29,7 +29,7 @@
             <input autofocus type="text" id="nicknamePick" placeholder="введите никнейм для отображения">
             <div class="hint">Укажите <b>прямую</b> ссылку на фоновое изображение или выберите файл:</div>
             <input type="text" id="bgurlPick" style="margin-bottom: 5px;" placeholder="введите прямую ссылку на фоновое изображение">
-            <input type="file" accept="image/*" id="imgpickCapture">
+            <input type="file" name="file" accept="image/*" id="imgpickCapture">
             <div class="hint">Степень затемнения фона:</div>
             <input type="range" id="bgOpacity" min="0" max="100" step="5" onchange="bgOpacityDisplay()" style="margin-bottom: 5px">
             <div class="hint bgOpacity">
@@ -48,10 +48,10 @@
             </div>
             <div class="hint">Загрузите изображения иконок:</div>
             <div id="iconsValuesWrapper">
-                <input type="file" accept="image/*" id="imgpickIcon1">
-                <input type="file" accept="image/*" id="imgpickIcon2">
-                <input type="file" accept="image/*" id="imgpickIcon3">
-                <input type="file" accept="image/*" id="imgpickIcon4">
+                <input type="file" name="file" accept="image/*" id="imgpickIcon1">
+                <input type="file" name="file" accept="image/*" id="imgpickIcon2">
+                <input type="file" name="file" accept="image/*" id="imgpickIcon3">
+                <input type="file" name="file" accept="image/*" id="imgpickIcon4">
             </div>
             <div class="hint">
                 <label>
