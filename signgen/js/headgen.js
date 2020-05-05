@@ -1,5 +1,6 @@
 onload = submit();
-onload = document.querySelector("#extendedMode").checked = false;
+onload = document.querySelector("input[type=\"checkbox\"]").checked = false;
+onload = document.querySelector("#fontWeight").value = 900;
 
 function submit() {
     bgByUrl();
@@ -7,6 +8,7 @@ function submit() {
     contentHeading();
     fontWeight();
     imgCheck();
+    document.querySelector(".result").innerHTML = "";
 }
 function bgByUrl() {
     document.querySelector(".background").src = document.querySelector("#bgByUrl").value;
@@ -42,6 +44,16 @@ function fontWeight() {
     }
     console.log("fontWeight completed");
 }
+function noCaps() {
+    if (document.querySelector("#extendedMode").checked) {
+        if (document.querySelector("#noCaps").checked) {
+            document.querySelector(".wrapper .heading").style.textTransform = "none";
+        } else {
+            document.querySelector(".wrapper .heading").style.textTransform = "uppercase";
+        }
+    }
+    console.log("fontWeight completed");
+}
 function imgCheck() {
     var img = document.querySelector("img");
     if (img.height < 220 || img.width < 870) {
@@ -52,4 +64,16 @@ function imgCheck() {
         console.log("imgCheck: pic is normal", img.height, img.width);
     }
     console.log("imgCheck completed");
+}
+function generate() {
+    var height = document.querySelector(".wrapper").offsetHeight;
+    domtoimage.toPng(document.querySelector("#capture"), {width: 850, height: height})
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        document.querySelector(".result").innerHTML = "";
+        document.querySelector(".result").appendChild(img);
+        //var openWindow = window.open(dataUrl, "Сгенерированное изображение", '_blank');
+        //openWindow.location;
+    })
 }

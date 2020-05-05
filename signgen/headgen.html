@@ -5,35 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Генератор заголовков</title>
         <link rel="stylesheet" href="style/headgen.css" type="text/css">
-        <script defer src="js/headgen.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script defer src="js/headgen.js"></script>
+        <script src="js/dom-to-image.js"></script>
     </head>
     <body>
         <div class="options">
             <div class="default">
-            <p>Загрузить картиночку</p>
-            <input type="file" accept="image/*" id="bgUpload" onchange="submit()">
-            <p>Использовать URL для картиночки</p>
-            <input type="text" id="bgByUrl" onchange="submit()" placeholder="ссылка на фоновое изображение">
-            <p>Содержимое заголовка</p>
-            <input type="text" id="contentHeading" onchange="submit()" placeholder="ваш распрекрасный текст заголовка">
-            <label><input type="checkbox" id="extendedMode" onchange="extendedMode()"> Расширенный режим</label>
-        </div>
-        <div class="extended">
-            <p>Вес шрифта (по умолчанию самый большой)</p>
-            <input type="range" id="fontWeight" onchange="submit()" min="100" max="900" step="100">
-        </div>
+                <p>Загрузить картиночку</p>
+                <input type="file" accept="image/*" id="bgUpload" onchange="submit()">
+                <p>Использовать URL для картиночки</p>
+                <input type="text" id="bgByUrl" onchange="submit()" placeholder="ссылка на фоновое  изображение">
+                <p>Содержимое заголовка</p>
+                <input type="text" id="contentHeading" onchange="submit()" placeholder="ваш распрекрасный текст заголовка">
+                <p><label><input type="checkbox" id="extendedMode" onchange="extendedMode()"> Расширенный режим</label></p>
+            </div>
+            <div class="extended">
+                <p>Вес шрифта (по умолчанию самый большой)</p>
+                <input type="range" id="fontWeight" onchange="submit()" min="100" max="900" step="100" >
+                <label><input type="checkbox" id="noCaps" onchange="noCaps()"> Отключить капс</label>
+            </div>
+            <input type="submit" value="Создать изображение" onclick="generate()">
         </div>
         <div class="preview">
-            <div id="capture">
+            <center><div id="capture">
                 <img src="" class="background">
                 <div class="wrapper">
-                    <span class="heading">Very nice heading! And also this is a mutiline shit.</span>
-                </div>
+                    <span class="heading">Very nice heading! And also this is a mutiline shit compatible.</span>
+                </div></center>
             </div>
-            <div id="imgSizeAlert">Загруженная фоновая картинка должна быть чуть-чуть больше баннера по размерам, иначе будет видно размытие по краям.
-            <p>Если конкретно, то больше, чем 870 на 220 пикселей.</p>
-        </div>
+            <center><div class="result"></div></center>
+            <div id="imgSizeAlert"><p>Загруженная фоновая картинка должна быть чуть-чуть больше баннера по размерам, иначе будет видно размытие по краям.</p>
+            Если конкретно, то больше, чем 870 на 220 пикселей.
+            </div>
         </div>
         <div class="footer">
             <span>Разработано в секретных лабораториях <a href="https://vk.com/vertexworks" target="_blank">vertexofvortex</a>.</span>
