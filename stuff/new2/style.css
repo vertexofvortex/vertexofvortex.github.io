@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+}
+#cover {
+    height: 100vh;
+}
+#cover div {
+    height: 100%;
+}
+#cover .description {
+    width: min-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 150px;
+    padding-right: 150px;
+    background: #202020;
+    box-shadow: inset 0px 0px 0px 10px tomato;
+    color: #fff;
+}
+#cover .description .iam {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1em;
+}
+#cover .description .nickname {
+    font-size: 50px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+#cover .description .desc {
+}
+#cover .picture {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/cover.jpg);
+    background-size: cover;
+    background-position: right;
+}
