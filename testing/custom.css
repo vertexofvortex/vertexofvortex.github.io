@@ -1,0 +1,9 @@
+body {
+    padding: 50px 10% 50px 10%;
+}
+.form-group {
+    margin-bottom: 5px;
+}
+input, label {
+    margin-right: 5px;
+}
