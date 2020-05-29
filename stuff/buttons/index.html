@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="button round"></div>
+        <div class="button rectangle"></div>
+        <div class="button roundedRectangle"></div>
+    </div>
+    <span class="desc">Soft blurred buttons concept</span>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+            background-color: #cecece;
+            column-count: 3;
+            font-family: "Poppins", sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #e6e6e6;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        .button {
+            height: 50px;
+            width: 50px;
+            background-color: #fff;
+            box-shadow: -5px -5px 5px 0px rgba(0, 0, 0, 0.1), 5px 5px 5px 0px #fff;
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .rectangle {
+            border-radius: 2px;
+            background-image: url(joystick.svg);
+        }
+        .round {
+            border-radius: 25px;
+            background-image: url(database.svg);
+        }
+        .roundedRectangle {
+            border-radius: 15px;
+            margin-right: 0px;
+            background-image: url(plug.svg);
+        }
+        .button:hover,
+        .button:focus {
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.035) inset;
+            cursor: pointer;
+        }
+        .button:active {
+            background-color: rgba(255, 255, 255, 0.5);
+            translate: 0 2px;
+        }
+        .desc {
+            color: #313131;
+        }
+    </style>
+</body>
+</html>
