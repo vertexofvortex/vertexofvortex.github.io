@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hryushido Translator</title>
+</head>
+<body>
+    <div class="halfscreen in">
+        <textarea id="in" cols="30" rows="10"></textarea>
+        <input type="button" value="Перевести на язык Хрюшидо" onclick="translate()" style="display: block">
+    </div>
+    <div class="halfscreen out">
+        <textarea id="out" cols="30" rows="10"></textarea>
+    </div>
+    <style>
+        body {
+            margin: 0px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .halfscreen {
+            padding: 200px 50px 50px 50px;
+        }
+        textarea {
+            width: 100%;
+        }
+    </style>
+    <script>
+        var input = document.getElementById('in'),
+            output = document.getElementById('out');
+        
+        input.value = '';
+        output.value = '';
+
+        function translate() {
+            output.value = input.value.replace(/([A-zА-яё]+)/gm, 'хрю');
+        }
+    </script>
+</body>
+</html>
