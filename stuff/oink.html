@@ -7,7 +7,7 @@
 <body>
     <div class="halfscreen in">
         <textarea id="in" cols="30" rows="10"></textarea>
-        <input type="button" value="Перевести на язык Хрюшидо" onclick="translate()" style="display: block">
+        <input id="translateButton" type="button" value="Перевести на язык Хрюшидо" style="display: block">
     </div>
     <div class="halfscreen out">
         <textarea id="out" cols="30" rows="10"></textarea>
@@ -27,8 +27,11 @@
     </style>
     <script>
         var input = document.getElementById('in'),
-            output = document.getElementById('out');
+            output = document.getElementById('out'),
+            translateButton = document.getElementById('translateButton');
         
+        translateButton.onclick = translate;
+
         input.value = '';
         output.value = '';
 
