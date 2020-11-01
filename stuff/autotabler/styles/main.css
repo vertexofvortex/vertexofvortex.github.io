@@ -7,12 +7,12 @@ body {
 }
 .layout {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 25% 75%;
     grid-template-rows: max-content 1fr 1fr;
     grid-template-areas:
-        "header header"
-        "input-text output-html"
-        "input-table output-picture";
+        "header         header"
+        "input-text     output-html"
+        "input-text     output-picture";
     height: 100%;
     padding: 5px;
     box-sizing: border-box;
@@ -31,29 +31,34 @@ body {
     margin-bottom: 0.5em;
     display: inline-block;
 }
-.window textarea {
-    display: block;
-    width: 100%;
-    resize: vertical;
-    height: 50%;
-    min-height: 2em;
-    max-height: 80%;
-}
 .header {
     grid-area: header;
     padding: 10px;
     margin: 5px;
     background-color: #404040 !important;
 }
-.input-text {
+.input {
     grid-area: input-text;
+    position: relative;
 }
-.input-table {
-    grid-area: input-table;
-}
-.output-html {
+.output {
     grid-area: output-html;
+    overflow: scroll;
+    background: #fbfbfb;
+    color: #000;
 }
-.output-picture {
-    grid-area: output-picture;
+.window textarea {
+    display: block;
+    width: 100%;
+    resize: vertical;
+    height: 200px;
+    min-height: 2em;
+    max-height: 80%;
+}
+.window fieldset {
+    margin: 0px;
+}
+form#submit {
+    position: absolute;
+    bottom: 0px;
 }

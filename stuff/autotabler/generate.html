@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/dom-to-image.js"></script>
     <title>CMTG-3000</title>
 </head>
 <body>
@@ -11,14 +12,31 @@
         <div class="window header">
             <span class="heading">Clan Members Table Generator v. 3000</span>
         </div>
-        <div class="window input-text">
-            <span class="heading">Ввод текста</span>
-            <textarea name="input-text"></textarea>
+        <div class="window input">
+            <form id="userlistInput">
+                <fieldset>
+                    <legend>Введите список участников</legend>
+                    <textarea id="textInput"></textarea>
+                </fieldset>
+            </form>
+            <form id="orderInput">
+                <fieldset>
+                    <legend>Укажите порядок рангов</legend>
+                    <div class="not-available">Список рангов недоступен. Он появится после генерации таблицы.</div>
+                </fieldset>
+            </form>
+            <form id="colorInput">
+                <fieldset>
+                    <legend>Укажите цвета рангов</legend>
+                    <div class="not-available">Список рангов недоступен. Он появится после генерации таблицы.</div>
+                </fieldset>
+            </form>
+            <form id="submit">
+                <input type="button" value="Обновить данные" id="refresh">
+                <input type="button" value="Сгенерировать" id="generate">
+            </form>
         </div>
-        <div class="window input-table">
-            <span class="heading">Ввод таблицы</span>
-        </div>
-        <div class="window output-html">
+        <div class="window output">
             <span class="heading">Вывод HTML</span>
         </div>
         <div class="window output-picture">

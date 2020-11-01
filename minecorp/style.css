@@ -1,0 +1,18 @@
+body {
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+#wrapper {
+    padding: 0px 20%;
+}
+
+.navbar {
+    width: 100%;
+
+}
