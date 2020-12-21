@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVBAR 3.0</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="logo.svg">
+        </div>
+        <div class="search">
+            <form class="searchbar" method="get" accept-charset="utf-8" action="https://forum.minecorp.ru/search.php">
+                <input type="hidden" name="action" value="search">
+                <input class="searcharea" type="text" name="keywords" maxlength="100" placeholder="Поиск по форуму">
+                <input class="searchicon" type="submit" name="search" value="">
+            </form>
+        </div>
+        <div class="buttons">
+            <a href="http://minecorp.ru">Главная</a>
+            <a href="https://forum.minecorp.ru/index.php">Форум</a>
+            <a href="https://forum.minecorp.ru/userlist.php">Пользователи</a>
+            <a href="https://forum.minecorp.ru/misc.php?action=rules">Правила</a>
+            <a href="https://forum.minecorp.ru/search.php">Поиск</a>
+            <a href="https://forum.minecorp.ru/profile.php?id=4212">Профиль</a>
+            <a href="https://forum.minecorp.ru/misc.php?section=pun_pm"><span>ЛС</span></a>
+            <a href="https://forum.minecorp.ru/admin/index.php">Администрирование</a>
+            <a href="https://forum.minecorp.ru/login.php">Выход</a>
+        </div>
+        <div class="user">
+            <div class="usernickname">
+                <span>vertexofvortex</span>
+            </div>
+            <img class="useravatar" src="https://forum.minecorp.ru/img/avatars/4212.jpg">
+        </div>
+    </nav>
+
+    <style>
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fbfbfb;
+
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+        }
+        .menu {
+            height: 48px;
+            width: 100%;
+            background-color: #fff;
+            /*box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);*/
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            padding: 0px 20px 0px 20px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 48px;
+            padding: 7px 0px 7px 0px;
+            box-sizing: border-box;
+            float: left;
+            cursor: pointer;
+            margin-right: 20px;
+            transition: ease 0.2s;
+        }
+        .logo img {
+            height: 100%;
+        }
+        .logo:hover, .logo:active, .logo:focus {
+            opacity: 0.8;
+        }
+
+        .searchbar {
+            white-space: normal;
+            display: flex;
+        }
+        .searcharea, .searchicon {
+            display: block;
+            border: 0px;
+            background-color: #f8f8f8;
+            height: 30px;
+            box-sizing: border-box;
+            transition: ease 0.2s;
+        }
+        .searcharea {
+            padding: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            border-radius: 5px 0px 0px 5px;
+        }
+        .searcharea:focus {
+            outline: none !important;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            width: 100%;
+        }
+        .searchicon {
+            border-radius: 0px 5px 5px 0px;
+            background-image: url(loupe.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 13px;
+            padding: 0px;
+            width: 30px;
+            cursor: pointer;
+        }
+        .searchicon:hover, .searchicon:focus, .searchicon:active {
+            background-color: #ececec;
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            width: max-content;
+            margin-right: 20px;
+            border-right: 1px solid #f8f8f8;
+        }
+        .buttons a {
+            display: block;
+            font-size: 0px;
+            width: 20px;
+            padding: 0px 20px 0px 20px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            transition: ease 0.2s;
+        }
+        .buttons a:hover, .buttons a:focus, .buttons a:active {
+            opacity: 0.75;
+        }
+        a[href="http://minecorp.ru"] {font-size: unset !important;display: flex; align-items: center; justify-content: center; width: max-content}
+        a[href*="login.php"] {background-image: url(https://raw.githubusercontent.com/vertexofvortex/customcorp/7e2402f1f3596dec52a144e24a713fa4efc62ac8/images/new/exit.svg)}
+        a[href*="admin"] {background-image: url(https://raw.githubusercontent.com/vertexofvortex/customcorp/7e2402f1f3596dec52a144e24a713fa4efc62ac8/images/new/settings.svg)}
+        a[href*="pun_pm"] {display: none}
+        a[href*="profile.php"] {display: none}
+        a[href*="search.php"] {display: none}
+        a[href*="rules"] {display: none}
+        a[href*="userlist"] {background-image: url(https://raw.githubusercontent.com/vertexofvortex/customcorp/7e2402f1f3596dec52a144e24a713fa4efc62ac8/images/new/users.svg)}
+        a[href="https://forum.minecorp.ru/index.php"] {display: none}
+
+        .user {
+            float: right;
+            height: 48px;
+            padding: 7px 0px 7px 0px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: ease 0.2s;
+        }
+        .user .useravatar {
+            max-height: 100%;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .user .usernickname {
+            font-weight: 700;
+        }
+        .user:after {
+            content: url(https://raw.githubusercontent.com/vertexofvortex/customcorp/master/images/arrowdownblack.svg);
+            margin-bottom: 5px;
+            margin-left: 10px;
+            opacity: 0.75;
+        }
+        .user:hover, .user:active, .user:focus {
+            opacity: 0.8;
+        }
+    </style>
+</body>
+</html>
