@@ -1,0 +1,77 @@
+* {
+    font-size: 15px !important;
+    font-family: 'JetBrains Mono', monospace;
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    height: 100vh;
+    max-height: 100vh;
+    background: #202020;
+}
+.container {
+    height: 100%;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto max-content max-content;
+}
+.output {
+    padding: 20px;
+    padding-right: 30%;
+    color: #fff;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: scroll;
+}
+.commandline {
+    min-height: 50px;
+    display: flex;
+}
+.prompts {
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #252525;
+}
+.button-enter {
+    width: 100px;
+    background: #e6371e;
+    padding: 0px 20px;
+    font-weight: 900;
+}
+.input-cmd {
+    width: 100%;
+    padding: 0px 20px;
+    border: 0px none;
+    background: #151515;
+    color: #fff;
+}
+.button-prompt {
+    background: none;
+    color: #e6371e;
+    text-decoration: underline;
+    padding: 0px;
+    margin-left: 20px;
+    height: 50px;
+}
+button {
+    border: 0px none;
+    cursor: pointer;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0px;
+    position: absolute;
+    height: 50px;
+    padding-right: 20px;
+}
+.logo svg {
+    height: 20px;
+    fill: #151515;
+}
+.logo:hover svg {
+    fill: #e6371e;
+}

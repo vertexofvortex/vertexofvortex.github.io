@@ -1,99 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>VERTEX</title>
-    <link href="style/index.css" type="text/css" rel="stylesheet">
-    <link href="images/favicon.png" type="image/x-icon" rel="shortcut icon">
-    <meta name="yandex-verification" content="ab41378a0ced9b2d" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[VRTX ~]</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <section>
-        <div class="container coverWrapper">
-            <div class="coverContainer">
-                <center><img src="images/logo.svg" class="logo"></center>
-                <center><h1>Привет. Я vertexofvortex</h1></center>
-            </div>
+    <div class="container">
+        <div class="output">
         </div>
-    </section>
-    <section id="about">
-        <div class="container aboutContainer">
-            <h1>Кто я такой?</h1>
-            <p>Меня зовут Николай, в сети я работаю под псевдонимом vertexofvortex и его производными. Я самый обыкновенный человек, заинтересованный в различных сферах, таких как графический дизайн, вёрстка веб-сайтов, программирование, фотосъёмка, видеомонтаж и прочее. Очень ленив, но когда имею желание что-либо сделать, я потрачу на это все свои силы и свободное время.</p>
-            <h1 class="adaptiveclass">Чем я обычно занимаюсь?</h1>
+        <div class="prompts">
+            <button class="button-prompt" id="clear">> очистить</button>
+            <button class="button-prompt" id="help">> справка</button>
+            <button class="button-prompt" id="about">> кто я?</button>
+            <button class="button-prompt" id="skills">> что я умею?</button>
+            <button class="button-prompt" id="activities">> чем я занимаюсь?</button>
+            <button class="button-prompt" id="projects">> мои работы</button>
+            <button class="button-prompt" id="neofetch">> neofetch :)</button>
+            <a href="https://vk.com/vertexworks" target="_blank" class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.64 113.84"><defs></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><polygon class="cls-1" points="69.03 8.25 50.08 9.57 47.62 21.3 66.2 20 69.03 8.25"/><path class="cls-1" d="M33.7,76.24q-.95-4.58-1.57-7.55L25.84,40.4l-14.59,1V23.84L22,23.09,19.45,11.72,0,13.08l22.72,90,11.75-.82V80.18C34.25,79,34,77.65,33.7,76.24Z"/><polygon class="cls-1" points="53.3 73.5 61.89 37.87 53.3 38.48 53.3 73.5"/><polygon class="cls-1" points="134.3 51.89 134.3 40.34 110.03 42.03 110.03 53.59 134.3 51.89"/><polygon class="cls-1" points="138.69 14.93 138.69 3.38 82.21 7.33 82.21 98.95 91.58 98.3 91.58 18.23 138.69 14.93"/><polygon class="cls-1" points="138.69 90.49 138.69 78.94 110.03 80.94 110.03 92.49 138.69 90.49"/><path class="cls-1" d="M174.33,57.87l8.79-.62.11.26.73-1.44-7.88-14.64-1.75.12V38.18L161,13.37l20.71-1.45L184,16.53l1.17-.08Q191.4,16,194.86,19T198.31,28a15.71,15.71,0,0,1-.25,2.81L207.8,10.1l4.36-.31a23.7,23.7,0,0,0-10.09-7.46A38,38,0,0,0,185.13.13l-29.5,2.06V93.82l9.73-.68,9-17.89Z"/><path class="cls-1" d="M212.8,42a30.57,30.57,0,0,0,3.86-10.62l-8.08,16.15A28.85,28.85,0,0,0,212.8,42Z"/><path class="cls-1" d="M195.63,74.84c-.67-1.55-1.17-2.73-1.51-3.54-.25.86-.67,2.1-1.25,3.73-.27.74-.57,1.5-.9,2.3l6,13.53,5.36-.38-5.4-10.66Q196.63,77.15,195.63,74.84Z"/><path class="cls-1" d="M194.14,37.61a18.25,18.25,0,0,1,.61,1.77A33.34,33.34,0,0,1,195.88,36l.19-.48A11.74,11.74,0,0,1,194.86,37C194.63,37.2,194.38,37.41,194.14,37.61Z"/><polygon class="cls-1" points="61.89 37.87 76.52 36.85 76.52 19.28 66.2 20 61.89 37.87"/><polygon class="cls-1" points="34.48 102.29 34.48 113.84 53.3 112.53 53.3 73.5 46.56 101.44 34.48 102.29"/><path class="cls-1" d="M34.47,39.79V80.18c.27,1.41.49,2.71.67,3.86.34-2.19.76-4.86,1.26-8s1-5.76,1.38-7.88L47.62,21.3,22,23.09,25.84,40.4Z"/><polygon class="cls-1" points="91.58 98.3 91.58 109.85 148.06 105.9 148.06 89.83 138.69 90.49 138.69 95 91.58 98.3"/><polygon class="cls-1" points="100.66 58.75 100.66 81.6 110.03 80.94 110.03 69.65 143.67 67.3 143.67 51.23 134.3 51.89 134.3 56.4 100.66 58.75"/><polygon class="cls-1" points="138.69 19.44 100.66 22.1 100.66 42.69 110.03 42.03 110.03 33 148.06 30.34 148.06 14.28 138.69 14.93 138.69 19.44"/><path class="cls-1" d="M229.64,100.2,205,54.6l3.54-7.07A27.44,27.44,0,0,1,201.07,53l17.32,36.44-15.1,1,5.64,11.16Z"/><path class="cls-1" d="M217.13,25.76a33.39,33.39,0,0,1-.47,5.62L228,8.69l-15.85,1.1c.35.46.7.94,1,1.43A25.81,25.81,0,0,1,217.13,25.76Z"/><path class="cls-1" d="M191.24,31.34,184,16.53l-9.63.67v21l1.75,3.25,9-.63a15.46,15.46,0,0,0,9-3.19c-.17-.42-.35-.88-.58-1.41Q192.62,34,191.24,31.34Z"/><path class="cls-1" d="M196.07,35.55a11.4,11.4,0,0,0,2-4.79l-.05.11C197.26,32.57,196.62,34.13,196.07,35.55Z"/><path class="cls-1" d="M174.33,75.25V92.51l-9,.63-6,12,20.2-1.41,11.05-23.37c.5-1,.95-2,1.36-3l-8.74-19.82Z"/></g></g></svg></div>
+            </a>
+        <div class="commandline">
+            <input class="input-cmd" type="text" placeholder="введите команду">
+            <button class="button-enter" tabindex="1">Enter</button>
         </div>
-    </section>
-    <section id="skills">
-        <div class="container skillsContainer">
-            <div id="design">
-                <img class="icon" src="images/skills/design.svg">
-                <h2>Графический дизайн/</h2>
-                <p>Имею опыт работы в Adobe Photoshop более четырёх лет и чуть меньше — в Adobe Illustrator. Работаю с растровой и векторной графикой</p>
-            </div>
-            <div id="webdev">
-                <img class="icon" src="images/skills/webdev.svg">
-                <h2>Веб-разработка/</h2>
-                <p>Впервые сверстал свой <a href="https://vertexofvortex.github.io/trash/outdated/1/" target="_blank">сайт-визитку</a> летом 2017. Опыт в разработке сайтов на HTML+CSS около трёх лет</p>
-            </div>
-            <div id="coding">
-                <img class="icon" src="images/skills/coding.svg">
-                <h2 class="prog">Программирование/</h2>
-                <p>Немного программировал на lua ещё в шестом классе. Особых результатов из-за лени не достиг. Использую JS в веб-разработке, знаю азы C++</p>
-            </div>
-        </div>
-    </section>
-    <section>
-            <div class="container textContainer">
-                <h1 class="nomargin">Мои лучшие проекты</h1>
-            </div>
-            <div class="container projectsContainer">
-                <div class="card">
-                    <div class="cardImg" id="sevenmines"></div>
-                    <div class="cardText">
-                        <h2>Сайт 7Mines</h2>
-                        <p>Вёрстка для сайта на HTML+CSS, выполненная в красочном минималистичном стиле</p>
-                        <a href="https://vertexofvortex.github.io/7mines/" target="_blank">Посмотреть</a> <span style="color: gray;">/</span> <a href="https://github.com/vertexofvortex/vertexofvortex.github.io/tree/master/7mines" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="cardImg" id="vkgroup"></div>
-                    <div class="cardText">
-                        <h2>Группа ВКонтакте</h2>
-                        <p>Выкладываю различные работы: оформление для групп, аватарки, фотографии, новости из жизни</p>
-                        <a href="https://vk.com/public152487383" target="_blank">Перейти</a>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section>
-        <div class="container textContainer">
-                <h1 class="nomargin">Связь со мной</h1>
-        </div>
-        <div class="container contactsContainer">
-            <div style="background: #5384bb;
-            background: linear-gradient(45deg, #5384bb 0%, #8ab6e9 100%);">
-                <h2>Страница ВКонтакте</h2>
-                <p>Не пишите в личные сообщения "привет" и не ждите ответа — пишите сразу и по делу</p>
-                <a href="https://vk.com/id243225448" target="_blank">Перейти</a>
-            </div>
-            <div style="background: #5384bb;
-            background: linear-gradient(45deg, #5384bb 0%, #8ab6e9 100%);">
-                <h2>Группа ВКонтакте</h2>
-                <p>Публикую там большинство своих нормальных работ, которые можно показать публике</p>
-                <a href="https://vk.com/public152487383" target="_blank">Перейти</a>
-            </div>
-            <div style="background: #a460cc;
-            background: linear-gradient(45deg, #a460cc 0%, #d85cb1 100%);">
-                <h2>Instagram</h2>
-                <p>Выкладываю туда различные фотографии с интересных мест, где я бываю</p>
-                <a href="https://www.instagram.com/vertexofvortex/" target="_blank">Перейти</a>
-            </div>
-        </div>
-    </section>
-    <section class="footer">
-        <div class="container">
-            © Разработка и оформление: vertexofvortex, 2017—2019
-        </div>
-    </section>
+    </div>
 </body>
 </html>
