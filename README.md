@@ -1,1 +1,0 @@
-# vertexofvortex.github.io
