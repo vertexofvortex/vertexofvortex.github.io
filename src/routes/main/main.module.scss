@@ -1,0 +1,22 @@
+@import "../../index.scss";
+
+.neofetchBlock {
+    display: flex;
+    width: 100%;
+    gap: calc(2 * var(--sh));
+    background: var(--vim-LineNrBg);
+    @include paddingsFull;
+    box-shadow: 0px 0px 0px 2px var(--vim-vimCommand);
+
+    .logo {
+        width: 300px;
+    }
+    .terminal {
+        white-space: pre;
+        flex-grow: 1;
+
+        .colored {
+            color: var(--vim-vimCommand);
+        }
+    }
+}

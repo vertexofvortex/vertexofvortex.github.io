@@ -1,0 +1,10 @@
+@import "../../index.scss";
+
+main {
+    min-height: calc(100vh - ((3 * var(--sv)) + ((3 * var(--sv)))));
+  
+    .content {
+        @include contentProps;
+        @include paddingsV;
+    }
+}

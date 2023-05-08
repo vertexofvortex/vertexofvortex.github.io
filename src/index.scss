@@ -75,6 +75,13 @@ button:focus-visible {
   padding-right: var(--sh);
 }
 
+@mixin paddingsFullEqual {
+  padding-top: var(--sv);
+  padding-bottom: var(--sv);
+  padding-left: calc(2 * var(--sh));
+  padding-right: calc(2 * var(--sh));
+}
+
 @mixin paddingsH {
   padding-left: var(--sh);
   padding-right: var(--sh);
@@ -133,10 +140,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-main {
-  height: calc(100vh - ((3 * var(--sv)) + ((3 * var(--sv)))));
 }
 
 .button-link {

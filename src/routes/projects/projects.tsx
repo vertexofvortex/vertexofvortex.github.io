@@ -1,5 +1,7 @@
+import { MainContent } from "../../components";
+
 function Projects() {
-  return <div>projects</div>;
+  return <MainContent>Projects</MainContent>;
 }
 
 export default Projects;
