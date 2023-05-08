@@ -4,7 +4,6 @@ header {
     width: 100%;
     background-color: var(--vim-StatusLineFg);
     color: var(--vim-StatusLineBg);
-    font-weight: bold;
     @include paddingsFull;
     
     .content {

@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Root from "./routes/root/root";
 
@@ -13,7 +13,11 @@ export const router = createBrowserRouter([
       {
         path: "",
         index: true,
-        element: <Main />,
+        element: (
+          <Suspense>
+            <Main />
+          </Suspense>
+        ),
       },
       {
         path: "main",
@@ -21,7 +25,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <Projects />,
+        element: (
+          <Suspense>
+            <Projects />
+          </Suspense>
+        ),
       },
     ],
   },

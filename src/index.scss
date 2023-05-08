@@ -135,6 +135,10 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  height: calc(100vh - ((3 * var(--sv)) + ((3 * var(--sv)))));
+}
+
 .button-link {
   background-color: var(--vim-StatusLineBg);
   color: var(--vim-StatusLineFg);

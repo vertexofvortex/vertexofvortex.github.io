@@ -1,0 +1,11 @@
+@import "../../index.scss";
+
+footer {
+    background: var(--vim-LineNrBg);
+    color: var(--vim-LineNrFg);
+    @include paddingsFull;
+
+    .content {
+        @include contentProps;
+    }
+}
