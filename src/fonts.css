@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "CaskaydiaCove Nerd Font";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/CaskaydiaCoveNerdFont-Regular.ttf");
+}
+
+@font-face {
+    font-family: "CaskaydiaCove Nerd Font";
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    src: url("/fonts/CaskaydiaCoveNerdFont-Italic.ttf");
+}
+
+@font-face {
+    font-family: "CaskaydiaCove Nerd Font";
+    font-display: swap;
+    font-style: bold;
+    font-weight: 700;
+    src: url("/fonts/CaskaydiaCoveNerdFont-Bold.ttf");
+}
+
+@font-face {
+    font-family: "CaskaydiaCove Nerd Font";
+    font-display: swap;
+    font-style: bold, italic;
+    font-weight: 700;
+    src: url("/fonts/CaskaydiaCoveNerdFont-BoldItalic.ttf");
+}

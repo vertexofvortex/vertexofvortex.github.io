@@ -1,0 +1,27 @@
+@import "../../index.scss";
+
+header {
+    width: 100%;
+    background-color: var(--vim-StatusLineFg);
+    color: var(--vim-StatusLineBg);
+    font-weight: bold;
+    @include paddingsFull;
+    
+    .content {
+        display: flex;
+        justify-content: space-between;
+        @include contentProps;
+
+        .logo {
+
+        }
+        .links {
+            display: flex;
+            gap: calc(2 * var(--sh));
+
+            a {
+                @include paddingsH
+            }
+        }
+    }
+}

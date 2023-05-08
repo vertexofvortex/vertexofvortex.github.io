@@ -1,5 +1,5 @@
 function Main() {
-  return <div>main</div>;
+  return <main>neofetch тут сделать</main>;
 }
 
 export default Main;

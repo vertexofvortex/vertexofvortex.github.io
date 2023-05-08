@@ -1,14 +1,15 @@
+import { Footer, Header } from "../../components";
 import styles from "./root.module.scss";
 import { Outlet } from "react-router-dom";
 
 function Root() {
   return (
     <div className={styles.root}>
-      <header>header</header>
+      <Header />
       <main>
         <Outlet />
       </main>
-      <footer>footer</footer>
+      <Footer />
     </div>
   );
 }
