@@ -151,3 +151,7 @@ body {
     background: var(--vim-vimCommand);
   }
 }
+
+.block {
+  margin-bottom: calc(3 * var(--sv));
+}

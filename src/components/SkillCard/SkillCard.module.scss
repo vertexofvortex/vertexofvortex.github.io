@@ -1,0 +1,12 @@
+@import "../../index.scss";
+
+.card {
+    //background: var(--vim-vimCommand);
+    box-shadow: inset 0px 0px 0px 2px var(--vim-vimCommand);
+    //white-space: pre;
+    @include paddingsFullEqual;
+
+    .description {
+        color: var(--vim-vimLineComment);
+    }
+}

@@ -1,22 +1,43 @@
 @import "../../index.scss";
 
-.neofetchBlock {
-    display: flex;
-    width: 100%;
-    gap: calc(2 * var(--sh));
-    background: var(--vim-LineNrBg);
+.cmd {
+    margin-bottom: var(--sv);
+    background: var(--vim-StatusLineBg);
     @include paddingsFull;
-    box-shadow: 0px 0px 0px 2px var(--vim-vimCommand);
+}
 
-    .logo {
-        width: 300px;
+.neofetch {
+    width: 100%;
+
+    .out {
+        display: flex;
+        gap: calc(2 * var(--sh));
+
+        .logo {
+            width: 400px;
+            height: 400px;
+            background-image: url("/me.jpg");
+            background-size: cover;
+            background-position: center center;
+        }
+        .terminal {
+            white-space: pre;
+            flex-grow: 1;
+    
+            .colored {
+                color: var(--vim-vimCommand);
+            }
+        }
     }
-    .terminal {
-        white-space: pre;
-        flex-grow: 1;
+}
 
-        .colored {
-            color: var(--vim-vimCommand);
+.skills {
+    .out {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: calc(2 * var(--sh));
+            row-gap: var(--sv);
         }
     }
 }
