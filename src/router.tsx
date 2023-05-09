@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Root from "./routes/root/root";
+import { loadContent } from "./routes/main/main.loader";
 
 const Main = lazy(() => import("./routes/main/main"));
 const Projects = lazy(() => import("./routes/projects/projects"));
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
             <Main />
           </Suspense>
         ),
+        loader: loadContent,
       },
       {
         path: "main",

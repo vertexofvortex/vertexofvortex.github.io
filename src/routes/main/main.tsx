@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router";
 import {
   MainContent,
   NeofetchBlock,
@@ -5,14 +6,17 @@ import {
   SkillsBlock,
   WhoamiBlock,
 } from "../../components";
+import { IContent } from "../../models";
 
 function Main() {
+  const content = useLoaderData() as IContent;
+
   return (
     <MainContent>
       <NeofetchBlock />
       <WhoamiBlock />
       <SkillsBlock />
-      <ProjectsBlock onlyFeatured />
+      <ProjectsBlock data={content.projects} onlyFeatured />
     </MainContent>
   );
 }

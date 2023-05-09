@@ -1,24 +1,12 @@
-import { ReactNode } from "react";
 import s from "./ProjectCard.module.scss";
-
-interface Props {
-  pictureUrl: string;
-  title: string;
-  description: string;
-  buttons: Array<{
-    className: string;
-    icon: ReactNode;
-    href: string;
-    text: ReactNode;
-  }>;
-}
+import { IProject } from "../../models";
 
 export function ProjectCard({
   pictureUrl,
   title,
   description,
   buttons,
-}: Props) {
+}: IProject) {
   return (
     <div className={s.card}>
       <div className={s.picture}>
@@ -30,8 +18,8 @@ export function ProjectCard({
       <div className={s.description}>{description}</div>
       <div className={s.buttons}>
         {buttons.map((button, key) => (
-          <a href={button.href} className={button.className} key={key}>
-            {button.icon} {button.text}
+          <a href={button.href} className={"button-link blue"} key={key}>
+            {button.text}
           </a>
         ))}
       </div>
