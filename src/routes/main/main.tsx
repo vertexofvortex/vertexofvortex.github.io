@@ -5,7 +5,6 @@ import {
   SkillsBlock,
   WhoamiBlock,
 } from "../../components";
-import s from "./main.module.scss";
 
 function Main() {
   return (

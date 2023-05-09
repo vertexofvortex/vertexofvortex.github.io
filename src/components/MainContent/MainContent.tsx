@@ -1,4 +1,4 @@
-import { Children, ReactNode } from "react";
+import { ReactNode } from "react";
 import s from "./MainContent.module.scss";
 
 interface Props {
