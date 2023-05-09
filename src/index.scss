@@ -142,16 +142,62 @@ body {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: var(--sh);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--vim-LineNrBg);
+  position: absolute;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--vim-LineNrFg);
+}
+
 .button-link {
   background-color: var(--vim-StatusLineBg);
   color: var(--vim-StatusLineFg);
   text-decoration: none;
+  display: flex;
+  @include paddingsH();
 
   &:hover {
     background: var(--vim-vimCommand);
+  }
+
+  &.big {
+    height: calc(3 * var(--sv));
+    align-items: center;
+  }
+
+  &.red {
+    background-color: var(--vim-vimCommand);
+    color: var(--vim-StatusLineBg);
+
+    &:hover {
+      background: var(--vim-StatusLineFg);
+    }
+  }
+
+  &.blue {
+    background-color: var(--vim-vimVar);
+
+    color: var(--vim-StatusLineBg);
+
+    &:hover {
+      background: var(--vim-StatusLineFg);
+    }
   }
 }
 
 .block {
   margin-bottom: calc(3 * var(--sv));
+}
+
+
+.cmd {
+  margin-bottom: var(--sv);
+  background: var(--vim-StatusLineBg);
+  @include paddingsFull;
 }

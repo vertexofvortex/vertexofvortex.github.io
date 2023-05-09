@@ -1,0 +1,32 @@
+@import "../../index.scss";
+
+.card {
+  box-shadow: inset 0px 0px 0px 2px var(--vim-vimVar);
+  display: flex;
+  flex-direction: column;
+  @include paddingsFullEqual;
+
+  .picture {
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: var(--sv);
+
+    img {
+      width: 100%;
+    }
+  }
+  .title {
+    margin-bottom: var(--sv);
+  }
+  .description {
+    color: var(--vim-vimLineComment);
+    margin-bottom: var(--sv);
+    padding-bottom: var(--sv);
+    border-bottom: 2px solid var(--vim-vimLineComment);
+    flex-grow: 1;
+  }
+  .buttons {
+    display: flex;
+    gap: calc(2 * var(--sh));
+  }
+}

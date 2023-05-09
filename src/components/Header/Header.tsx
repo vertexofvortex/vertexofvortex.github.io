@@ -15,13 +15,13 @@ export function Header() {
         </div>
         <div className={s.links}>
           <Link to={"/"} className={"button-link"}>
-            {`\udb81\udd9f`} Main page
+            {`\udb81\udd9f`} Главная
           </Link>
           <Link to={"projects"} className={"button-link"}>
-            {`\udb80\udd69`} Projects
+            {`\udb80\udd69`} Проекты
           </Link>
           <Link to={""} className={"button-link"}>
-            {`\ueba1`} GitHub
+            {`\udb80\udea4`} GitHub
           </Link>
         </div>
       </div>

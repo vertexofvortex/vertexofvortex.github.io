@@ -10,7 +10,7 @@ interface Props {
 export function SkillCard({ icon, title, description }: Props) {
   return (
     <div className={s.card}>
-      {icon} {title}
+      {icon} <b>{title}</b>
       <br />
       <br />
       <div className={s.description}>{description}</div>

@@ -17,10 +17,6 @@ header {
         .links {
             display: flex;
             gap: calc(2 * var(--sh));
-
-            a {
-                @include paddingsH
-            }
         }
     }
 }

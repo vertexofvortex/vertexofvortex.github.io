@@ -1,0 +1,24 @@
+.neofetch {
+  width: 100%;
+
+  .out {
+      display: flex;
+      gap: calc(2 * var(--sh));
+
+      .logo {
+          width: 400px;
+          height: 400px;
+          background-image: url("/me.jpg");
+          background-size: cover;
+          background-position: center center;
+      }
+      .terminal {
+          white-space: pre;
+          flex-grow: 1;
+  
+          .colored {
+              color: var(--vim-vimCommand);
+          }
+      }
+  }
+}
