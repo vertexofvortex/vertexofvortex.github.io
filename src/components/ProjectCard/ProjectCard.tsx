@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { ReactNode } from "react";
 import s from "./ProjectCard.module.scss";
 
 interface Props {
@@ -22,7 +22,7 @@ export function ProjectCard({
   return (
     <div className={s.card}>
       <div className={s.picture}>
-        <img src="/pictures/mock.jpg" alt="" />
+        <img src={pictureUrl} alt="" />
       </div>
       <div className={s.title}>
         <b>{title}</b>
