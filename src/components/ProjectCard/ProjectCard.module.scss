@@ -7,9 +7,12 @@
   @include paddingsFullEqual;
 
   .picture {
-    height: 300px;
+    height: calc(300px + var(--sv));
+    width: calc(100% + var(--sh));
     overflow: hidden;
     margin-bottom: var(--sv);
+    border-right: var(--sh) solid var(--vim-StatusLineBg);
+    border-bottom: var(--sv) solid var(--vim-StatusLineBg);
 
     img {
       width: 100%;

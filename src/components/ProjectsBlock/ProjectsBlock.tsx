@@ -1,11 +1,15 @@
 import { ProjectCard } from "..";
+import { IProject } from "../../models";
 import s from "./ProjectsBlock.module.scss";
 
 interface Props {
+  data: IProject[];
   onlyFeatured?: boolean;
 }
 
-export function ProjectsBlock({ onlyFeatured }: Props) {
+export function ProjectsBlock({ data, onlyFeatured }: Props) {
+  console.log(data);
+
   return (
     <>
       {onlyFeatured && (
@@ -15,16 +19,18 @@ export function ProjectsBlock({ onlyFeatured }: Props) {
             ls ./projects
           </div>
           <div className={s.out}>
-            <ProjectCard
+            {data.map((project, key) => (
+              <ProjectCard {...project} key={key} />
+            ))}
+            {/* <ProjectCard
               pictureUrl="/pictures/mock.jpg"
               title="VK RSS Parser"
               description="Сервис, который позволяет подключить группы со своего аккаунта ВКонтакте и привязать к ним источники RSS-лент, с которых будут опрашиваться новости. Интересующие вас посты затем можно выбрать, отредактировать и опубликовать в группе вместе с красивым сгенерированным сниппетом-картинкой"
               buttons={[
                 {
                   className: "button-link blue",
-                  icon: `\udb80\udea2`,
                   href: "",
-                  text: "Репозиторий с исходным кодом",
+                  text: "\udb80\udea2 Репозиторий с исходным кодом",
                 },
               ]}
             />
@@ -35,9 +41,8 @@ export function ProjectsBlock({ onlyFeatured }: Props) {
               buttons={[
                 {
                   className: "button-link blue",
-                  icon: `\udb81\udd9f`,
                   href: "",
-                  text: "Перейти на сайт",
+                  text: "\udb81\udd9f Перейти на сайт",
                 },
               ]}
             />
@@ -48,12 +53,11 @@ export function ProjectsBlock({ onlyFeatured }: Props) {
               buttons={[
                 {
                   className: "button-link blue",
-                  icon: `\udb81\udd9f`,
                   href: "https://project-armor.io/main",
-                  text: "Перейти на сайт",
+                  text: "\udb81\udd9f Перейти на сайт",
                 },
               ]}
-            />
+            /> */}
           </div>
         </div>
       )}
