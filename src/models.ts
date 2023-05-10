@@ -1,14 +1,24 @@
 import { ReactNode } from "react";
 
+export interface IProjectButton {
+  type: "internal" | "external";
+  url: string;
+  children: ReactNode;
+}
+
 export interface IProject {
-  pictureUrl: string;
-  title: string;
-  description: string;
-  buttons: Array<{
-    className: string;
-    href: string;
-    text: ReactNode;
-  }>;
+  coverUrl: string;
+  title: ReactNode;
+  buttons?: IProjectButton[];
+
+  featuredView: {
+    description: ReactNode;
+  };
+
+  fullView: {
+    description: ReactNode;
+    galleryPicturesUrls?: string[];
+  };
 }
 
 export interface IContent {

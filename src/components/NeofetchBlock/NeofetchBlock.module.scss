@@ -11,6 +11,8 @@
             background-image: url("/me.jpg");
             background-size: cover;
             background-position: center center;
+            border-right: var(--sh) solid var(--vim-StatusLineBg);
+            border-bottom: var(--sv) solid var(--vim-StatusLineBg);
         }
         .terminal {
             white-space: pre;
