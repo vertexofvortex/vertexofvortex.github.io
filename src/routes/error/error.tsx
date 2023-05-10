@@ -7,8 +7,8 @@ export function ErrorPage() {
 
   return (
     <MainContent>
-      <div className="cmd">
-        <span style={{ color: "var(--vim-vimCommand)" }}>
+      <div className={s.error}>
+        <span>
           {`\ue654`} An error occured. Look into the browser console
           <div className={s.errorText}>{JSON.stringify(error)}</div>
         </span>

@@ -23,5 +23,30 @@
         "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png"
       ]
     }
+  },
+  {
+    "slugId": "test",
+    "coverUrl": "https://avatars.yandex.net/get-music-content/5207413/78d6cdf8.a.16849658-1/m1000x1000",
+    "title": "Test",
+    "buttons": [
+      {
+        "type": "external",
+        "url": "https://github.com/vertexofvortex/vk-rss-bot",
+        "children": "\udb80\udea2 Репозиторий на GitHub"
+      }
+    ],
+
+    "featuredView": {
+      "description": "Lorem ipsum dolor sit amet"
+    },
+  
+    "fullView": {
+      "description": "Lorem ipsum dolor sit amet",
+      "galleryPicturesUrls": [
+        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
+        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
+        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png"
+      ]
+    }
   }
 ]

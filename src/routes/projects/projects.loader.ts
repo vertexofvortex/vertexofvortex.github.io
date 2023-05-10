@@ -6,5 +6,5 @@ export const loadProjects = async (): Promise<any> => {
     "/content/projects.json"
   );
 
-  return projects;
+  return projects.data;
 };

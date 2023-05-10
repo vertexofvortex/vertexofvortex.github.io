@@ -11,7 +11,7 @@ export function ProjectsBlock({ data }: Props) {
   console.log(data);
 
   return (
-    <Section className={s.projects} promptCommand="ls ./projects">
+    <Section className={s.projects} promptCommand="ls ./projects -U | head -2">
       <div className={s.content}>
         {data.map((project, key) => (
           <ProjectCard {...project} key={key} />

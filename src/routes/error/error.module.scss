@@ -1,5 +1,13 @@
-.errorText {
-  margin-top: var(--sv);
-  background-color: var(--vim-vimCommand);
+@import "../../index.scss";
+
+.error {
+  background: var(--vim-vimCommand);
   color: var(--vim-NormalBg);
+  font-weight: bold;
+  @include paddingsFull;
+
+  .errorText {
+    margin-top: var(--sv);
+    font-weight: normal;
+  }
 }
