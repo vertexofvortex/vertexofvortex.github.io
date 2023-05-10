@@ -4,14 +4,17 @@ import s from "./Header.module.scss";
 export function Header() {
   const location = useLocation();
 
+  const decorateLocation = (location: string) => {
+    if (location === "/") location = location.slice(1);
+
+    return `~${location}`;
+  };
+
   return (
     <header>
       <div className={s.content}>
         <div className={s.logo}>
-          <b>
-            vertex@github.io:{" "}
-            {location.pathname !== "/" ? `~${location.pathname}` : "~"}
-          </b>
+          <b>vertexofvortex@github.io: {decorateLocation(location.pathname)}</b>
         </div>
         <div className={s.links}>
           <Link to={"/"} className={"button-link"}>
