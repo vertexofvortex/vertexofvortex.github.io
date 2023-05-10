@@ -1,11 +1,17 @@
 [
   {
+    "slugId": "vk-rss-parser",
     "coverUrl": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
     "title": "VK RSS Parser",
     "buttons": [
       {
         "type": "external",
         "url": "https://github.com/vertexofvortex/vk-rss-bot",
+        "children": "\udb80\udea2 Репозиторий с исходным кодом"
+      },
+      {
+        "type": "internal",
+        "url": "/projects/vk-rss-bot",
         "children": "\udb80\udea2 Репозиторий с исходным кодом"
       }
     ],

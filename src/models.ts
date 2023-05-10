@@ -7,6 +7,7 @@ export interface IProjectButton {
 }
 
 export interface IProject {
+  slugId: string;
   coverUrl: string;
   title: ReactNode;
   buttons?: IProjectButton[];
