@@ -31,6 +31,9 @@ export function ProjectCard(project: IProject) {
                   {button.children}
                 </Link>
               )}
+              <Link to={`/projects/${project.slugId}`} className="button-link">
+                {`\udb84\udc02`} Подробнее
+              </Link>
             </>
           ))}
       </div>
