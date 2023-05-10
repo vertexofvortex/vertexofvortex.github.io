@@ -1,3 +1,4 @@
+import { Section } from "..";
 import s from "./NeofetchBlock.module.scss";
 
 export function NeofetchBlock() {
@@ -5,12 +6,8 @@ export function NeofetchBlock() {
   const dateNow = new Date();
 
   return (
-    <div className={`block ${s.neofetch}`}>
-      <div className={`cmd ${s.cmd}`}>
-        <span style={{ color: "var(--vim-vimVar)" }}>user@vertex: ~</span>{" "}
-        neofetch
-      </div>
-      <div className={s.out}>
+    <Section className={s.neofetch} promptCommand={"neofetch"}>
+      <div className={s.content}>
         <div className={s.logo} />
         <div className={s.terminal}>
           <span className={s.colored}>user</span>@
@@ -41,7 +38,7 @@ export function NeofetchBlock() {
           <span className={s.colored}>Memory</span>: 86B Neurons
         </div>
       </div>
-    </div>
+    </Section>
   );
 }
 

@@ -1,9 +1,21 @@
+@import "../../index.scss";
+
 .projects {
-  
-  .out {
+  .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: calc(2 * var(--sh));
     row-gap: var(--sv);
+    margin-bottom: var(--sv)
+  }
+  .moreButton {
+    background: var(--vim-StatusLineBg);
+    display: flex;
+    justify-content: center;
+    @include paddingsFullEqual;
+
+    a {
+      width: fit-content;
+    }
   }
 }

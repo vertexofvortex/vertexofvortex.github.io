@@ -16,7 +16,7 @@ function Main() {
       <NeofetchBlock />
       <WhoamiBlock />
       <SkillsBlock />
-      <ProjectsBlock data={content.projects} onlyFeatured />
+      <ProjectsBlock data={content.projects} />
     </MainContent>
   );
 }
