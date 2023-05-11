@@ -13,14 +13,14 @@ export function Project() {
         promptCommand="cat *"
         promptDir={`~/projects/${project.slugId}`}
       >
-        {/* TODO: мб сделать тут аски арт из заголовка? */}
-        <div className={s.title}>
-          VK RSS Parser
-          <br />
-          <ASCIITitle text="abcdefghijklmnopqrstuvwzyx" />
-        </div>
         <div className={s.cover}>
-          <img src={project.coverUrl} />
+          <div className={s.coverContainer}>
+            <img src={project.coverUrl} />
+          </div>
+          <div className={s.title}>
+            {/* project.title?.toString()! */}
+            <ASCIITitle text={"Digital Assets Capital"} isDividedByWords />
+          </div>
         </div>
         <div className={s.description}>{project.fullView.description}</div>
         <div className={s.gallery}>
