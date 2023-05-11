@@ -10,10 +10,7 @@ header {
         display: flex;
         justify-content: space-between;
         @include contentProps;
-
-        .logo {
-
-        }
+        
         .links {
             display: flex;
             gap: calc(2 * var(--sh));

@@ -1,17 +1,15 @@
 @import "../../index.scss";
 
 .skills {
-    .out {
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: calc(2 * var(--sh));
-            row-gap: var(--sv);
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: calc(2 * var(--sh));
+        row-gap: var(--sv);
 
-            .more {
-                color: var(--vim-vimLineComment);
-                @include paddingsFullEqual;
-            }
+        .more {
+            color: var(--vim-vimLineComment);
+            @include paddingsFullEqual;
         }
     }
 }

@@ -1,13 +1,19 @@
 import { Footer, Header } from "../../components";
-import styles from "./root.module.scss";
+import s from "./root.module.scss";
 import { Outlet } from "react-router-dom";
+import ErrorPage from "../error/error";
 
-function Root() {
+interface Props {
+  isError?: boolean;
+}
+
+function Root({ isError }: Props) {
   return (
-    <div className={styles.root}>
+    <div className={s.root}>
       <Header />
       <main>
-        <Outlet />
+        {!isError && <Outlet />}
+        {isError && <ErrorPage />}
       </main>
       <Footer />
     </div>

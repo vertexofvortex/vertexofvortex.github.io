@@ -1,0 +1,12 @@
+@import "../../index.scss";
+
+.section {
+  margin-bottom: calc(3 * var(--sv));
+}
+
+
+.cmd {
+  margin-bottom: var(--sv);
+  background: var(--vim-StatusLineBg);
+  @include paddingsFull;
+}
