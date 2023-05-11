@@ -4,11 +4,11 @@
   border-right: var(--sh) solid var(--vim-StatusLineBg);
   border-bottom: var(--sv) solid var(--vim-StatusLineBg);
   margin-bottom: var(--sv);
+  background: var(--vim-StatusLineBg);
   width: calc(100% + var(--sh));
 
   .gallery {
     position: relative;
-    background: #000;
     overflow-x: hidden;
 
     .wrapper {
@@ -27,6 +27,7 @@
         img {
           display: block;
           max-width: 100%;
+          user-select: none;
         }
       }
     }
@@ -43,41 +44,24 @@
       height: 100%;
       cursor: pointer;
       white-space: pre;
-      opacity: 0.3;
+      opacity: 0;
       z-index: 10;
+      transition: 0.2s steps(3);
 
       &.prev {
         left: 0;
         top: 0;
 
-        &:hover {
-          background-image:
-            linear-gradient(#131313,#131313),
-            linear-gradient(#474747,#474747),
-            linear-gradient(#686868,#686868),
-            linear-gradient(#767676,#767676),
-            linear-gradient(#8b8b8b,#8b8b8b),
-            linear-gradient(#adadad,#adadad),
-            linear-gradient(#cecece,#cecece);
-        }
       }
       &.next {
         right: 0;
         top: 0;
-
-        &:hover {
-          background-image:
-            linear-gradient(#cecece,#cecece),
-            linear-gradient(#adadad,#adadad),
-            linear-gradient(#8b8b8b,#8b8b8b),
-            linear-gradient(#767676,#767676),
-            linear-gradient(#686868,#686868),
-            linear-gradient(#474747,#474747),
-            linear-gradient(#131313,#131313);
-        }
+        transform: rotate(180deg);
       }
 
       &:hover {
+        opacity: 0.7;
+        background-repeat:no-repeat;
         background-size:
           calc(1 * (100% / 7)) 100%,
           calc(2 * (100% / 7)) 100%,
@@ -86,7 +70,14 @@
           calc(5 * (100% / 7)) 100%,
           calc(6 * (100% / 7)) 100%,
           calc(7 * (100% / 7)) 100%;
-        background-repeat:no-repeat;
+        background-image: 
+          linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+          linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+          linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+          linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+          linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+          linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+          linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15));
       }
     }
     .navigation {

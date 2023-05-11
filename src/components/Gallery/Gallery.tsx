@@ -70,7 +70,7 @@ export function Gallery({ pictures }: Props) {
         )}
         {currentSlide !== pictures.length - 1 && (
           <button className={s.next} onClick={handleNextSlide}>
-            {`\udb81\udcad`}
+            {`\udb81\udcae`}
           </button>
         )}
         <div className={s.navigation}>
