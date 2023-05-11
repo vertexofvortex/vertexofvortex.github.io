@@ -59,7 +59,7 @@ export function Gallery({ pictures }: Props) {
         >
           {pictures.map((pic) => (
             <div className={s.pictureContainer} style={{ width: galleryWidth }}>
-              <img src={pic.url} />
+              <img src={pic.url} loading="lazy" />
             </div>
           ))}
         </div>
