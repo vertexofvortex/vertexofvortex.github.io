@@ -1,8 +1,6 @@
-import { RouteErrorContext } from "react-router/dist/lib/context";
 import { Footer, Header } from "../../components";
 import s from "./root.module.scss";
 import { Outlet } from "react-router-dom";
-import { RenderErrorBoundary } from "react-router/dist/lib/hooks";
 import ErrorPage from "../error/error";
 
 interface Props {

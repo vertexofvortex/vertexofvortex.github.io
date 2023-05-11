@@ -1,0 +1,9 @@
+.asciiTitle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sh);
+
+  .char {
+    white-space: pre;
+  }
+}

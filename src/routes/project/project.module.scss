@@ -5,7 +5,11 @@
     background-color: var(--vim-vimVar);
     color: var(--vim-StatusLineBg);
     font-weight: bold;
-    margin-bottom: var(--sv);
+    // margin-bottom: var(--sv);
+    border-right: var(--sh) solid var(--vim-StatusLineBg);
+    border-bottom: var(--sv) solid var(--vim-StatusLineBg);
+    width: calc(100% + var(--sh));
+    margin-bottom: calc(-1 * var(--sv));
     @include paddingsFull;
   }
   .cover {
@@ -13,16 +17,29 @@
     border-bottom: var(--sv) solid var(--vim-StatusLineBg);
     margin-bottom: var(--sv);
     width: calc(100% + var(--sh));
-    height: 500px;
+    height: 350px;
     overflow: hidden;
     background: var(--vim-StatusLineBg);
 
     img {
       max-width: 100%;
       display: block;
+      user-select: none;
     }
   }
   .description {
-    margin-bottom: var(--sv);
+    margin-bottom: calc(3 * var(--sv));
+  }
+  .gallery {
+    > :first-child {
+      background-color: var(--vim-StatusLineBg);
+      color: var(--vim-StatusLineFg);
+      // margin-bottom: var(--sv);
+      border-right: var(--sh) solid var(--vim-StatusLineBg);
+      border-bottom: var(--sv) solid var(--vim-StatusLineBg);
+      width: calc(100% + var(--sh));
+      margin-bottom: calc(-1 * var(--sv));
+      @include paddingsFull;
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { Gallery, MainContent, Section } from "../../components";
+import { ASCIITitle, Gallery, MainContent, Section } from "../../components";
 import s from "./project.module.scss";
 import { IProject } from "../../models";
 
@@ -14,14 +14,23 @@ export function Project() {
         promptDir={`~/projects/${project.slugId}`}
       >
         {/* TODO: мб сделать тут аски арт из заголовка? */}
-        <div className={s.title}>VK RSS Parser</div>
+        <div className={s.title}>
+          VK RSS Parser
+          <br />
+          <ASCIITitle text="abcdefghijklmnopqrstuvwzyx" />
+        </div>
         <div className={s.cover}>
           <img src={project.coverUrl} />
         </div>
         <div className={s.description}>{project.fullView.description}</div>
-        {project.fullView.galleryPictures && (
-          <Gallery pictures={project.fullView.galleryPictures} />
-        )}
+        <div className={s.gallery}>
+          {project.fullView.galleryPictures && (
+            <>
+              <div>Галерея</div>
+              <Gallery pictures={project.fullView.galleryPictures} />
+            </>
+          )}
+        </div>
       </Section>
     </MainContent>
   );

@@ -78,6 +78,7 @@ export function Gallery({ pictures }: Props) {
             <button
               onClick={() => setCurrentSlide(i)}
               className={currentSlide === i ? s.current : ""}
+              key={pic.url}
             >
               {i + 1}
             </button>

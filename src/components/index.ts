@@ -9,3 +9,4 @@ export { WhoamiBlock } from "./WhoamiBlock/WhoamiBlock";
 export { ProjectCard } from "./ProjectCard/ProjectCard";
 export { Section } from "./Section/Section";
 export { Gallery } from "./Gallery/Gallery";
+export { ASCIITitle } from "./ASCIITitle/ASCIITitle";
