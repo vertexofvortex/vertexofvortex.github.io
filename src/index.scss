@@ -74,18 +74,18 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: var(--sh);
-}
+// ::-webkit-scrollbar {
+//   width: var(--sh);
+// }
 
-::-webkit-scrollbar-track {
-  background-color: var(--vim-LineNrBg);
-  position: absolute;
-}
+// ::-webkit-scrollbar-track {
+//   background-color: var(--vim-LineNrBg);
+//   position: absolute;
+// }
 
-::-webkit-scrollbar-thumb {
-  background-color: var(--vim-LineNrFg);
-}
+// ::-webkit-scrollbar-thumb {
+//   background-color: var(--vim-LineNrFg);
+// }
 
 .button-link {
   background-color: var(--vim-StatusLineBg);

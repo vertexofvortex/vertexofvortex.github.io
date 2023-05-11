@@ -1,0 +1,129 @@
+@import "../../index.scss";
+
+.galleryContainer {
+  border-right: var(--sh) solid var(--vim-StatusLineBg);
+  border-bottom: var(--sv) solid var(--vim-StatusLineBg);
+  margin-bottom: var(--sv);
+  width: calc(100% + var(--sh));
+
+  .gallery {
+    position: relative;
+    background: #000;
+    overflow-x: hidden;
+
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      width: max-content;
+      transition: 0.5s;
+      // transition-timing-function: steps(calc(round(1200px / 9px)));
+      transition-timing-function: steps(15);
+
+      .pictureContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+    }
+    > button {
+      display: block;
+      position: absolute;
+      background: transparent;
+      border: 0px;
+      color: #fff;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0px calc(3 * var(--sh));
+      margin: 0px;
+      height: 100%;
+      cursor: pointer;
+      white-space: pre;
+      opacity: 0.3;
+      z-index: 10;
+
+      &.prev {
+        left: 0;
+        top: 0;
+
+        &:hover {
+          background-image:
+            linear-gradient(#131313,#131313),
+            linear-gradient(#474747,#474747),
+            linear-gradient(#686868,#686868),
+            linear-gradient(#767676,#767676),
+            linear-gradient(#8b8b8b,#8b8b8b),
+            linear-gradient(#adadad,#adadad),
+            linear-gradient(#cecece,#cecece);
+        }
+      }
+      &.next {
+        right: 0;
+        top: 0;
+
+        &:hover {
+          background-image:
+            linear-gradient(#cecece,#cecece),
+            linear-gradient(#adadad,#adadad),
+            linear-gradient(#8b8b8b,#8b8b8b),
+            linear-gradient(#767676,#767676),
+            linear-gradient(#686868,#686868),
+            linear-gradient(#474747,#474747),
+            linear-gradient(#131313,#131313);
+        }
+      }
+
+      &:hover {
+        background-size:
+          calc(1 * (100% / 7)) 100%,
+          calc(2 * (100% / 7)) 100%,
+          calc(3 * (100% / 7)) 100%,
+          calc(4 * (100% / 7)) 100%,
+          calc(5 * (100% / 7)) 100%,
+          calc(6 * (100% / 7)) 100%,
+          calc(7 * (100% / 7)) 100%;
+        background-repeat:no-repeat;
+      }
+    }
+    .navigation {
+      display: flex;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin-bottom: var(--sv);
+      gap: var(--sh);
+      justify-content: center;
+
+      button {
+        display: block;
+        border: 0px;
+        background: var(--vim-StatusLineBg);
+        color: var(--vim-StatusLineFg);
+        font-size: inherit;
+        font-family: inherit;
+        cursor: pointer;
+        @include paddingsH;
+
+        &.current {
+          background: var(--vim-vimCommand);
+          font-weight: bold;
+          padding-left: calc(2 * var(--sh));
+          padding-right: calc(2 * var(--sh));
+        }
+
+        &:hover {
+          background: var(--vim-vimCommand);
+        }
+      }
+    }
+  }
+  .pictureDescription {
+    @include paddingsFullEqual;
+    background-color: var(--vim-StatusLineFg);
+    color: var(--vim-StatusLineBg);
+  }
+}

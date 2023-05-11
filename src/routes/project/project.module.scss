@@ -1,0 +1,28 @@
+@import "../../index.scss";
+
+.project {
+  .title {
+    background-color: var(--vim-vimVar);
+    color: var(--vim-StatusLineBg);
+    font-weight: bold;
+    margin-bottom: var(--sv);
+    @include paddingsFull;
+  }
+  .cover {
+    border-right: var(--sh) solid var(--vim-StatusLineBg);
+    border-bottom: var(--sv) solid var(--vim-StatusLineBg);
+    margin-bottom: var(--sv);
+    width: calc(100% + var(--sh));
+    height: 500px;
+    overflow: hidden;
+    background: var(--vim-StatusLineBg);
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  .description {
+    margin-bottom: var(--sv);
+  }
+}
