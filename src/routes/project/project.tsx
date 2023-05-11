@@ -18,8 +18,7 @@ export function Project() {
             <img src={project.coverUrl} />
           </div>
           <div className={s.title}>
-            {/* project.title?.toString()! */}
-            <ASCIITitle text={"Digital Assets Capital"} isDividedByWords />
+            <ASCIITitle text={project.title?.toString()!} isDividedByWords />
           </div>
         </div>
         <div className={s.description}>{project.fullView.description}</div>
