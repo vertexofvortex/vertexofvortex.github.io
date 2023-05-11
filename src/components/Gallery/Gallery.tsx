@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import s from "./Gallery.module.scss";
+import { IGalleryPicture } from "../../models";
 
 interface Props {
-  pictures: string[];
+  pictures: IGalleryPicture[];
 }
 
 export function Gallery({ pictures }: Props) {
@@ -58,7 +59,7 @@ export function Gallery({ pictures }: Props) {
         >
           {pictures.map((pic) => (
             <div className={s.pictureContainer} style={{ width: galleryWidth }}>
-              <img src={pic} />
+              <img src={pic.url} />
             </div>
           ))}
         </div>
@@ -84,10 +85,7 @@ export function Gallery({ pictures }: Props) {
         </div>
       </div>
       <div className={s.pictureDescription}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse provident
-        nobis dicta harum. Quidem saepe recusandae incidunt quod. Distinctio,
-        voluptas incidunt veritatis accusamus sit ipsam in alias consequatur
-        ratione architecto.
+        {pictures[currentSlide].description}
       </div>
     </div>
   );

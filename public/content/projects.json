@@ -17,11 +17,23 @@
   
     "fullView": {
       "description": "Сервис, который позволяет подключить группы со своего аккаунта ВКонтакте и привязать к ним источники RSS-лент, с которых будут опрашиваться новости. Интересующие вас посты затем можно выбрать, отредактировать и опубликовать в группе вместе с красивым сгенерированным сниппетом-картинкой",
-      "galleryPicturesUrls": [
-        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
-        "https://cdn.sstatic.net/Img/teams/teams-illo-free-sidebar-promo.svg?v=47faa659a05e",
-        "https://res.cloudinary.com/practicaldev/image/fetch/s--66pbhi9k--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j50mwr0ltv6h9rgiwl1b.png",
-        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png"
+      "galleryPictures": [
+        {
+          "url": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
+          "description": "Описание слайда"
+        },
+        {
+          "url": "https://cdn.sstatic.net/Img/teams/teams-illo-free-sidebar-promo.svg?v=47faa659a05e",
+          "description": "Lorem ipsum dolor sit amet 1"
+        },
+        {
+          "url": "https://res.cloudinary.com/practicaldev/image/fetch/s--66pbhi9k--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j50mwr0ltv6h9rgiwl1b.png",
+          "description": "Lorem ipsum dolor sit amet 2"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
+          "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+        }
       ]
     }
   },

@@ -19,8 +19,8 @@ export function Project() {
           <img src={project.coverUrl} />
         </div>
         <div className={s.description}>{project.fullView.description}</div>
-        {project.fullView.galleryPicturesUrls && (
-          <Gallery pictures={project.fullView.galleryPicturesUrls} />
+        {project.fullView.galleryPictures && (
+          <Gallery pictures={project.fullView.galleryPictures} />
         )}
       </Section>
     </MainContent>

@@ -6,6 +6,11 @@ export interface IProjectButton {
   children: ReactNode;
 }
 
+export interface IGalleryPicture {
+  url: string;
+  description: ReactNode;
+}
+
 export interface IProject {
   slugId: string;
   coverUrl: string;
@@ -18,7 +23,7 @@ export interface IProject {
 
   fullView: {
     description: ReactNode;
-    galleryPicturesUrls?: string[];
+    galleryPictures?: IGalleryPicture[];
   };
 }
 
