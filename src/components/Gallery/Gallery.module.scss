@@ -4,7 +4,7 @@
   border-right: var(--sh) solid var(--vim-StatusLineBg);
   border-bottom: var(--sv) solid var(--vim-StatusLineBg);
   margin-bottom: var(--sv);
-  background: var(--vim-StatusLineBg);
+  background: var(--vim-CursorBg);
   width: calc(100% + var(--sh));
 
   .gallery {
