@@ -10,3 +10,4 @@ export { ProjectCard } from "./ProjectCard/ProjectCard";
 export { Section } from "./Section/Section";
 export { Gallery } from "./Gallery/Gallery";
 export { ASCIITitle } from "./ASCIITitle/ASCIITitle";
+export { Title } from "./Title/Title";

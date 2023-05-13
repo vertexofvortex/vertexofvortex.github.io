@@ -1,0 +1,11 @@
+@import "../../index.scss";
+
+.title {
+  background-color: var(--vim-StatusLineBg);
+  color: var(--vim-StatusLineFg);
+  @include paddingsFullEqual;
+
+  &.mb {
+    margin-bottom: calc(1 * var(--sv));
+  }
+}

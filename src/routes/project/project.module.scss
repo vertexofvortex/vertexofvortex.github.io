@@ -31,23 +31,22 @@
     white-space: pre-wrap;
   }
   .gallery {
-    margin-bottom: calc(2 * var(--sv));
+    margin-bottom: calc(3 * var(--sv));
 
-    > :first-child {
-      background-color: var(--vim-StatusLineBg);
-      color: var(--vim-StatusLineFg);
-      // margin-bottom: var(--sv);
-      border-right: var(--sh) solid var(--vim-StatusLineBg);
-      border-bottom: var(--sv) solid var(--vim-StatusLineBg);
-      width: calc(100% + var(--sh));
-      margin-bottom: calc(-1 * var(--sv));
-      @include paddingsFullEqual;
-    }
+    // > :first-child {
+    //   background-color: var(--vim-StatusLineBg);
+    //   color: var(--vim-StatusLineFg);
+    //   // margin-bottom: var(--sv);
+    //   border-right: var(--sh) solid var(--vim-StatusLineBg);
+    //   border-bottom: var(--sv) solid var(--vim-StatusLineBg);
+    //   width: calc(100% + var(--sh));
+    //   margin-bottom: calc(-1 * var(--sv));
+    //   @include paddingsFullEqual;
+    // }
   }
   .links {
     .container {
       display: flex;
-      margin-top: var(--sv);
       gap: calc(2 * var(--sh));
     }
   }

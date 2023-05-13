@@ -1,5 +1,11 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { ASCIITitle, Gallery, MainContent, Section } from "../../components";
+import {
+  ASCIITitle,
+  Gallery,
+  MainContent,
+  Section,
+  Title,
+} from "../../components";
 import s from "./project.module.scss";
 import { IProject } from "../../models";
 
@@ -22,16 +28,13 @@ export function Project() {
           </div>
         </div>
         <div className={s.description}>{project.fullView.description}</div>
-        <div className={s.gallery}>
-          {project.fullView.galleryPictures && (
-            <>
-              <div>Галерея</div>
-              <Gallery pictures={project.fullView.galleryPictures} />
-            </>
-          )}
-        </div>
+        {project.fullView.galleryPictures && (
+          <div className={s.gallery}>
+            <Gallery pictures={project.fullView.galleryPictures} hasTitle />
+          </div>
+        )}
         <div className={s.links}>
-          Ссылки
+          <Title hasMarginBottom>Ссылки</Title>
           <div className={s.container}>
             {project.buttons?.map((button, key) => (
               <>
