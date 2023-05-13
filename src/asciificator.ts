@@ -32,8 +32,8 @@
 
 export function asciify(
   text: string,
-  replacementChar: string = "\u2588",
-  isDividedByWords: boolean = false
+  replacementChar = "\u2588",
+  isDividedByWords = false
 ): any[] {
   const dictionary: any = {
     a: " ### \n#   #\n#####\n#   #\n#   #",
@@ -69,7 +69,7 @@ export function asciify(
   const textWords: string[][] = [];
 
   for (let i = 0; i < text.length; i++) {
-    let char = text[i].toLowerCase();
+    const char = text[i].toLowerCase();
 
     if (!(char in dictionary)) {
       textCharacters.push(undefinedCharacter.replaceAll("#", replacementChar));

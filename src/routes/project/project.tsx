@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useLocation } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import {
   ASCIITitle,
   Gallery,
