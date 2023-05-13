@@ -18,11 +18,11 @@ export interface IProject {
   buttons?: IProjectButton[];
 
   featuredView: {
-    description: ReactNode;
+    description: string;
   };
 
   fullView: {
-    description: ReactNode;
+    description: string;
     galleryPictures?: IGalleryPicture[];
   };
 }
