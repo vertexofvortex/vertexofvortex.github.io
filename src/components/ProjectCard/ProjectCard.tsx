@@ -5,7 +5,12 @@ import { Link } from "react-router-dom";
 export function ProjectCard(project: IProject) {
   return (
     <div className={s.card}>
-      <div className={s.picture}>
+      <div
+        className={s.picture}
+        style={
+          project.coverVerticalPos && { alignItems: project.coverVerticalPos }
+        }
+      >
         <img src={project.coverUrl} />
       </div>
       <div className={s.title}>

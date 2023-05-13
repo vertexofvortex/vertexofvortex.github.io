@@ -34,35 +34,67 @@
     }
   },
   {
-    "slugId": "test",
-    "coverUrl": "https://avatars.yandex.net/get-music-content/5207413/78d6cdf8.a.16849658-1/m1000x1000",
-    "title": "Test",
+    "slugId": "dac",
+    "coverUrl": "/pictures/dac-cover.jpg",
+    "coverVerticalPos": "center",
+    "title": "Digital Assets Capital",
     "buttons": [
       {
         "type": "external",
-        "url": "https://github.com/vertexofvortex/vk-rss-bot",
-        "children": "\udb80\udea2 Репозиторий на GitHub"
+        "url": "https://da-capital.io",
+        "children": "\udb81\udd9f Перейти на сайт"
       }
     ],
 
     "featuredView": {
-      "description": "Lorem ipsum dolor sit amet"
+      "description": "Приватный инвестиционный фонд, в разработке которого я занимался фронтендом сайта, а также помогал латать дыры в API"
     },
   
     "fullView": {
-      "description": "Lorem ipsum dolor sit amet",
+      "description": "Приватный инвестиционный фонд, в разработке которого я занимался фронтендом сайта, а также помогал латать дыры в API",
       "galleryPictures": [
         {
-          "url": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
-          "description": "Lorem ipsum dolor sit amet 1"
+          "url": "/pictures/dac-g-1.png",
+          "description": "Показать больше, к сожалению, не представляется возможным"
+        }
+      ]
+    }
+  },
+  {
+    "slugId": "project-armor",
+    "coverUrl": "/pictures/project-armor-cover.jpg",
+    "coverVerticalPos": "center",
+    "title": "Project Armor",
+    "buttons": [
+      {
+        "type": "external",
+        "url": "https://project-armor.io",
+        "children": "\udb81\udd9f Перейти на сайт"
+      }
+    ],
+
+    "featuredView": {
+      "description": "Польская киберспортивная организация, имеет свой состав по различным играм, а также занимается проектами в сфере криптоиндустрии и NFT. Я занимался разработкой их веб-сайта"
+    },
+  
+    "fullView": {
+      "description": "Польская киберспортивная организация, имеет свой состав по различным играм, а также занимается проектами в сфере криптоиндустрии и NFT. Я занимался разработкой их веб-сайта",
+      "galleryPictures": [
+        {
+          "url": "/pictures/project-armor-g-1.png",
+          "description": "Главная страница"
         },
         {
-          "url": "https://sportishka.com/uploads/posts/2022-11/1667602777_2-sportishka-com-p-alyaska-dostoprimechatelnosti-pinterest-2.jpg",
-          "description": "Lorem ipsum dolor sit amet 1"
+          "url": "/pictures/project-armor-g-2.png",
+          "description": "Магазин"
         },
         {
-          "url": "https://kartinkin.net/uploads/posts/2021-03/thumbs/1616109053_53-p-alyaska-krasivie-foto-55.jpg",
-          "description": "Lorem ipsum dolor sit amet 1"
+          "url": "/pictures/project-armor-g-3.png",
+          "description": "Страница игровой команды"
+        },
+        {
+          "url": "/pictures/project-armor-g-4.png",
+          "description": "Раздел партнёров"
         }
       ]
     }

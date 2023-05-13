@@ -9,13 +9,26 @@
     background: var(--vim-StatusLineBg);
 
     .coverContainer {
+      // max-height: 350px;
+      // width: 100%;
+      // overflow: hidden;
+      // align-items: center;
+      // justify-content: center;
+
+      // img {
+      //   width: 100%;
+      //   display: block;
+      //   user-select: none;
+      // }
       max-height: 350px;
       overflow: hidden;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      background: var(--vim-StatusLineBg);
 
       img {
         width: 100%;
-        display: block;
-        user-select: none;
       }
     }
 

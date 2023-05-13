@@ -39,7 +39,14 @@ export function Project() {
         promptDir={`~/projects/${project.slugId}`}
       >
         <div className={s.cover}>
-          <div className={s.coverContainer}>
+          <div
+            className={s.coverContainer}
+            style={
+              project.coverVerticalPos && {
+                alignItems: project.coverVerticalPos,
+              }
+            }
+          >
             <img src={project.coverUrl} />
           </div>
           <div className={s.title}>

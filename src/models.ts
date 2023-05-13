@@ -14,6 +14,7 @@ export interface IGalleryPicture {
 export interface IProject {
   slugId: string;
   coverUrl: string;
+  coverVerticalPos?: "start" | "center" | "end";
   title: ReactNode;
   buttons?: IProjectButton[];
 
