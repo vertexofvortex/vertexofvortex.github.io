@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { ASCIITitle, Gallery, MainContent, Section } from "../../components";
 import s from "./project.module.scss";
 import { IProject } from "../../models";
@@ -29,6 +29,34 @@ export function Project() {
               <Gallery pictures={project.fullView.galleryPictures} />
             </>
           )}
+        </div>
+        <div className={s.links}>
+          Ссылки
+          <div className={s.container}>
+            {project.buttons?.map((button, key) => (
+              <>
+                {button.type === "external" && (
+                  <a
+                    href={button.url}
+                    target="_blank"
+                    className={"button-link blue"}
+                    key={key}
+                  >
+                    {button.children}
+                  </a>
+                )}
+                {button.type === "internal" && (
+                  <Link
+                    to={button.url}
+                    className={"button-link blue"}
+                    key={key}
+                  >
+                    {button.children}
+                  </Link>
+                )}
+              </>
+            ))}
+          </div>
         </div>
       </Section>
     </MainContent>

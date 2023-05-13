@@ -31,6 +31,8 @@
     white-space: pre-wrap;
   }
   .gallery {
+    margin-bottom: calc(2 * var(--sv));
+
     > :first-child {
       background-color: var(--vim-StatusLineBg);
       color: var(--vim-StatusLineFg);
@@ -40,6 +42,13 @@
       width: calc(100% + var(--sh));
       margin-bottom: calc(-1 * var(--sv));
       @include paddingsFullEqual;
+    }
+  }
+  .links {
+    .container {
+      display: flex;
+      margin-top: var(--sv);
+      gap: calc(2 * var(--sh));
     }
   }
 }
