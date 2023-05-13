@@ -8,8 +8,6 @@ interface Props {
 }
 
 export function ProjectsBlock({ data }: Props) {
-  console.log(data);
-
   return (
     <Section className={s.projects} promptCommand="ls ./projects -U | head -2">
       <div className={s.content}>

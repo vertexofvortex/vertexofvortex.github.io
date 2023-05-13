@@ -27,16 +27,8 @@
           "description": "Lorem ipsum dolor sit amet 1"
         },
         {
-          "url": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
-          "description": "Описание слайда"
-        },
-        {
           "url": "https://res.cloudinary.com/practicaldev/image/fetch/s--66pbhi9k--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j50mwr0ltv6h9rgiwl1b.png",
           "description": "Lorem ipsum dolor sit amet 2"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
-          "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
         }
       ]
     }
@@ -59,10 +51,19 @@
   
     "fullView": {
       "description": "Lorem ipsum dolor sit amet",
-      "galleryPicturesUrls": [
-        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
-        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
-        "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png"
+      "galleryPictures": [
+        {
+          "url": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
+          "description": "Lorem ipsum dolor sit amet 1"
+        },
+        {
+          "url": "https://sportishka.com/uploads/posts/2022-11/1667602777_2-sportishka-com-p-alyaska-dostoprimechatelnosti-pinterest-2.jpg",
+          "description": "Lorem ipsum dolor sit amet 1"
+        },
+        {
+          "url": "https://kartinkin.net/uploads/posts/2021-03/thumbs/1616109053_53-p-alyaska-krasivie-foto-55.jpg",
+          "description": "Lorem ipsum dolor sit amet 1"
+        }
       ]
     }
   }

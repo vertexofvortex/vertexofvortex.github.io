@@ -16,8 +16,6 @@ export function Project() {
   const replaceInternalLink = (
     domNode: DOMNode
   ): false | void | object | JSX.Element | null | undefined => {
-    console.log(domNode);
-
     if (!(domNode instanceof Element)) return;
 
     if (
@@ -61,9 +59,9 @@ export function Project() {
         <div className={s.links}>
           <Title hasMarginBottom>Ссылки</Title>
           <div className={s.container}>
-            {project.buttons?.map((button, key) => (
-              <>
-                {button.type === "external" && (
+            {project.buttons?.map((button, key) => {
+              if (button.type === "external")
+                return (
                   <a
                     href={button.url}
                     target="_blank"
@@ -72,8 +70,9 @@ export function Project() {
                   >
                     {button.children}
                   </a>
-                )}
-                {button.type === "internal" && (
+                );
+              if (button.type === "internal")
+                return (
                   <Link
                     to={button.url}
                     className={"button-link blue"}
@@ -81,9 +80,8 @@ export function Project() {
                   >
                     {button.children}
                   </Link>
-                )}
-              </>
-            ))}
+                );
+            })}
           </div>
         </div>
       </Section>

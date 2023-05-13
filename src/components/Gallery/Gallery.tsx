@@ -60,8 +60,12 @@ export function Gallery({ pictures, hasTitle }: Props) {
             // transitionTimingFunction: `steps(calc(round(${galleryWidth}px / 9px)))`,
           }}
         >
-          {pictures.map((pic) => (
-            <div className={s.pictureContainer} style={{ width: galleryWidth }}>
+          {pictures.map((pic, key) => (
+            <div
+              className={s.pictureContainer}
+              style={{ width: galleryWidth }}
+              key={key}
+            >
               <img src={pic.url} loading="lazy" />
             </div>
           ))}
