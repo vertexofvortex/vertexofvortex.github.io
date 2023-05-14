@@ -30,7 +30,7 @@ jobs:
         run: npm run build
         
       - name: Copy index.html to 404.html
-        run: cp ./index.html ./404.html 
+        run: echo $(pwd) && cp ./index.html ./404.html 
         
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3.9.3
