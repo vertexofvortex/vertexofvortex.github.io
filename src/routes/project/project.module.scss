@@ -1,45 +1,65 @@
 @import "../../index.scss";
 
 .project {
-  .title {
-    background-color: var(--vim-vimVar);
-    color: var(--vim-StatusLineBg);
-    font-weight: bold;
-    // margin-bottom: var(--sv);
-    border-right: var(--sh) solid var(--vim-StatusLineBg);
-    border-bottom: var(--sv) solid var(--vim-StatusLineBg);
-    width: calc(100% + var(--sh));
-    margin-bottom: calc(-1 * var(--sv));
-    @include paddingsFull;
-  }
   .cover {
     border-right: var(--sh) solid var(--vim-StatusLineBg);
     border-bottom: var(--sv) solid var(--vim-StatusLineBg);
     margin-bottom: var(--sv);
     width: calc(100% + var(--sh));
-    height: 350px;
-    overflow: hidden;
     background: var(--vim-StatusLineBg);
 
-    img {
-      max-width: 100%;
-      display: block;
-      user-select: none;
+    .coverContainer {
+      // max-height: 350px;
+      // width: 100%;
+      // overflow: hidden;
+      // align-items: center;
+      // justify-content: center;
+
+      // img {
+      //   width: 100%;
+      //   display: block;
+      //   user-select: none;
+      // }
+      max-height: 350px;
+      overflow: hidden;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      background: var(--vim-StatusLineBg);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .title {
+      color: var(--vim-vimVar);
+      font-weight: bold;
+      @include paddingsFullEqual;
+      padding-bottom: 0px;
     }
   }
   .description {
     margin-bottom: calc(3 * var(--sv));
   }
   .gallery {
-    > :first-child {
-      background-color: var(--vim-StatusLineBg);
-      color: var(--vim-StatusLineFg);
-      // margin-bottom: var(--sv);
-      border-right: var(--sh) solid var(--vim-StatusLineBg);
-      border-bottom: var(--sv) solid var(--vim-StatusLineBg);
-      width: calc(100% + var(--sh));
-      margin-bottom: calc(-1 * var(--sv));
-      @include paddingsFull;
+    margin-bottom: calc(3 * var(--sv));
+
+    // > :first-child {
+    //   background-color: var(--vim-StatusLineBg);
+    //   color: var(--vim-StatusLineFg);
+    //   // margin-bottom: var(--sv);
+    //   border-right: var(--sh) solid var(--vim-StatusLineBg);
+    //   border-bottom: var(--sv) solid var(--vim-StatusLineBg);
+    //   width: calc(100% + var(--sh));
+    //   margin-bottom: calc(-1 * var(--sv));
+    //   @include paddingsFullEqual;
+    // }
+  }
+  .links {
+    .container {
+      display: flex;
+      gap: calc(2 * var(--sh));
     }
   }
 }

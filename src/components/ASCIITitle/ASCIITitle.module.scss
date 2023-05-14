@@ -1,9 +1,32 @@
 .asciiTitle {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sh);
+  row-gap: var(--sv);
+  
+  &.letters {
+    column-gap: var(--sh);
+  }
+  &.words {
+    column-gap: calc(5 * var(--sh));
+  }
 
   .char {
     white-space: pre;
+  }
+  .word {
+    white-space: pre;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sh);
+    animation: test 1s steps(5);
+  }
+}
+
+@keyframes test {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

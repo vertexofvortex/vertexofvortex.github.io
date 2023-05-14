@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import s from "./Gallery.module.scss";
 import { IGalleryPicture } from "../../models";
+import { Title } from "..";
 
 interface Props {
   pictures: IGalleryPicture[];
+  hasTitle?: boolean;
 }
 
-export function Gallery({ pictures }: Props) {
+export function Gallery({ pictures, hasTitle }: Props) {
   const gallery = useRef<null | HTMLDivElement>(null);
   const wrapper = useRef<null | HTMLDivElement>(null);
   const [galleryWidth, setGalleryWidth] = useState<number>(0);
@@ -48,6 +50,7 @@ export function Gallery({ pictures }: Props) {
 
   return (
     <div className={s.galleryContainer}>
+      {hasTitle && <Title>Галерея</Title>}
       <div className={s.gallery} ref={gallery}>
         <div
           className={s.wrapper}
@@ -57,8 +60,12 @@ export function Gallery({ pictures }: Props) {
             // transitionTimingFunction: `steps(calc(round(${galleryWidth}px / 9px)))`,
           }}
         >
-          {pictures.map((pic) => (
-            <div className={s.pictureContainer} style={{ width: galleryWidth }}>
+          {pictures.map((pic, key) => (
+            <div
+              className={s.pictureContainer}
+              style={{ width: galleryWidth }}
+              key={key}
+            >
               <img src={pic.url} loading="lazy" />
             </div>
           ))}

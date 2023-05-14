@@ -4,7 +4,7 @@
   border-right: var(--sh) solid var(--vim-StatusLineBg);
   border-bottom: var(--sv) solid var(--vim-StatusLineBg);
   margin-bottom: var(--sv);
-  background: var(--vim-StatusLineBg);
+  background: var(--vim-CursorBg);
   width: calc(100% + var(--sh));
 
   .gallery {
@@ -15,9 +15,9 @@
       display: flex;
       flex-direction: row;
       width: max-content;
-      transition: 0.5s;
+      transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
       // transition-timing-function: steps(calc(round(1200px / 9px)));
-      transition-timing-function: steps(15);
+      //transition-timing-function: steps(15);
 
       .pictureContainer {
         display: flex;
@@ -46,7 +46,6 @@
       white-space: pre;
       opacity: 0;
       z-index: 10;
-      transition: 0.2s steps(3);
 
       &.prev {
         left: 0;
@@ -97,6 +96,7 @@
         font-size: inherit;
         font-family: inherit;
         cursor: pointer;
+        user-select: none;
         @include paddingsH;
 
         &.current {
