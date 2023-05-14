@@ -1,20 +1,20 @@
-name: CI
+name: Deploy to gh-pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.16]
-    
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{matrix.node-version}}

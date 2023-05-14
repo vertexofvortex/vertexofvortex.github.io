@@ -1,18 +1,18 @@
-name: CI
+name: Deploy dev build to gh-pages
 
 on:
   push:
-    branches: [ dev ]
+    branches: [dev]
   workflow_dispatch:
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.16]
-    
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{matrix.node-version}}
@@ -28,4 +28,4 @@ jobs:
         with:
           deploy_key: ${{secrets.ACTIONS_DEPLOY_KEY}}
           publish_dir: ./dist
-          destination_dir: devbuild
+          destination_dir: ./dev
