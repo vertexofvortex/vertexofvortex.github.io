@@ -89,6 +89,29 @@ html {
   }
 }
 
+p {
+  margin-top: 0px;
+  margin-bottom: var(--sv);
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+a {
+  color: var(--vim-vimVar);
+  text-decoration: none;
+
+  &:hover {
+    background: var(--vim-StatusLineBg);
+  }
+
+  &:not([href^="/"]):after {
+    content: " \f08e";
+    padding-right: var(--sh);
+  }
+}
+
 .button-link {
   background-color: var(--vim-StatusLineBg);
   color: var(--vim-StatusLineFg);
@@ -101,8 +124,8 @@ html {
   }
 
   &.big {
-    height: calc(3 * var(--sv));
     align-items: center;
+    @include paddingsFullEqual;
   }
 
   &.red {
@@ -112,6 +135,10 @@ html {
     &:hover {
       background: var(--vim-StatusLineFg);
     }
+  }
+
+  &::after {
+    content: none !important;
   }
 
   &.blue {

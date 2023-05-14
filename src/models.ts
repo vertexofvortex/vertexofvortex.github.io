@@ -14,19 +14,28 @@ export interface IGalleryPicture {
 export interface IProject {
   slugId: string;
   coverUrl: string;
+  coverVerticalPos?: "start" | "center" | "end";
   title: ReactNode;
   buttons?: IProjectButton[];
 
   featuredView: {
-    description: ReactNode;
+    description: string;
   };
 
   fullView: {
-    description: ReactNode;
+    description: string;
     galleryPictures?: IGalleryPicture[];
   };
 }
 
+export interface IContact {
+  text: string;
+  url: string;
+  color: string;
+  background: string;
+}
+
 export interface IContent {
   projects: IProject[];
+  contacts: IContact[];
 }

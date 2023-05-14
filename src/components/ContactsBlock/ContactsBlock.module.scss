@@ -1,0 +1,20 @@
+@import "../../index.scss";
+
+.contacts {
+  .content {
+    display: flex;
+    column-gap: calc(2 * var(--sh));
+    row-gap: var(--sv);
+    justify-content: center;
+    background: var(--vim-StatusLineBg);
+    @include paddingsFullEqual;
+
+    a {
+      white-space: pre;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

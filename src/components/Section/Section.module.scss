@@ -8,5 +8,5 @@
 .cmd {
   margin-bottom: var(--sv);
   background: var(--vim-StatusLineBg);
-  @include paddingsFull;
+  @include paddingsFullEqual;
 }

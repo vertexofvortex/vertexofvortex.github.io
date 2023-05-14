@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router";
 import {
+  ContactsBlock,
   MainContent,
   NeofetchBlock,
   ProjectsBlock,
@@ -17,6 +18,7 @@ function Main() {
       <WhoamiBlock />
       <SkillsBlock />
       <ProjectsBlock data={content.projects} />
+      <ContactsBlock data={content.contacts} />
     </MainContent>
   );
 }
