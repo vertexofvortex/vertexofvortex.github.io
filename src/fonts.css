@@ -2,30 +2,38 @@
     font-family: "CaskaydiaCove Nerd Font";
     font-display: swap;
     font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/CaskaydiaCoveNerdFont-Regular.ttf");
+    font-weight: normal;
+    src: url("/fonts/CaskaydiaCoveNerdFont-Regular.ttf"),
+         url("/fonts/CaskaydiaCoveNF-Regular.woff"),
+         url("/fonts/CaskaydiaCoveNF-Regular.woff2");
 }
 
 @font-face {
     font-family: "CaskaydiaCove Nerd Font";
     font-display: swap;
     font-style: italic;
-    font-weight: 400;
-    src: url("/fonts/CaskaydiaCoveNerdFont-Italic.ttf");
+    font-weight: normal;
+    src: url("/fonts/CaskaydiaCoveNerdFont-Italic.ttf"),
+         url("/fonts/CaskaydiaCoveNF-Italic.woff")
+         url("/fonts/CaskaydiaCoveNF-Italic.woff2");
 }
 
 @font-face {
     font-family: "CaskaydiaCove Nerd Font";
     font-display: swap;
-    font-style: bold;
-    font-weight: 700;
-    src: url("/fonts/CaskaydiaCoveNerdFont-Bold.ttf");
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/CaskaydiaCoveNerdFont-Bold.ttf"),
+         url("/fonts/CaskaydiaCoveNF-Bold.woff")
+         url("/fonts/CaskaydiaCoveNF-Bold.woff2");
 }
 
 @font-face {
     font-family: "CaskaydiaCove Nerd Font";
     font-display: swap;
-    font-style: bold, italic;
-    font-weight: 700;
-    src: url("/fonts/CaskaydiaCoveNerdFont-BoldItalic.ttf");
+    font-style: italic;
+    font-weight: bold;
+    src: url("/fonts/CaskaydiaCoveNerdFont-BoldItalic.ttf")
+         url("/fonts/CaskaydiaCoveNF-BoldItalic.woff"),
+         url("/fonts/CaskaydiaCoveNF-BoldItalic.woff2");
 }
