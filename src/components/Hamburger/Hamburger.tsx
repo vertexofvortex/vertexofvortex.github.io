@@ -1,8 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import s from "./Hamburger.module.scss";
 import { Link } from "react-router-dom";
+import { IHeaderLink } from "../../models";
 
-export function Hamburger() {
+interface Props {
+  data: IHeaderLink[];
+}
+
+export function Hamburger({ data }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const menu = useRef<HTMLDivElement>(null);
 
@@ -15,15 +20,30 @@ export function Hamburger() {
       {isMenuOpen && (
         <>
           <div className={s.menu} ref={menu}>
-            <Link to={"/"} className={"button-link big"}>
-              {`\udb81\udd9f`} Главная
-            </Link>
-            <Link to={"projects"} className={"button-link big"}>
-              {`\udb80\udd69`} Проекты
-            </Link>
-            <Link to={""} className={"button-link big"}>
-              {`\udb80\udea4`} GitHub
-            </Link>
+            {data.map((link) => {
+              if (link.type !== "external") {
+                return (
+                  <Link
+                    to={link.url}
+                    className={"button-link big"}
+                    key={link.url}
+                  >
+                    {link.text}
+                  </Link>
+                );
+              } else {
+                return (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    className={"button-link big"}
+                    key={link.url}
+                  >
+                    {link.text}
+                  </a>
+                );
+              }
+            })}
           </div>
           <div className={s.outside} onClick={() => setIsMenuOpen(false)} />
         </>

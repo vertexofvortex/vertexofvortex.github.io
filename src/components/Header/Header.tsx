@@ -1,8 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import s from "./Header.module.scss";
 import { Hamburger } from "..";
+import { IHeaderLink } from "../../models";
 
-export function Header() {
+interface Props {
+  data: IHeaderLink[];
+}
+
+export function Header({ data }: Props) {
   const location = useLocation();
 
   const decorateLocation = (location: string) => {
@@ -23,18 +28,29 @@ export function Header() {
           </div>
         </div>
         <div className={s.links}>
-          <Link to={"/"} className={"button-link"}>
-            {`\udb81\udd9f`} Главная
-          </Link>
-          <Link to={"projects"} className={"button-link"}>
-            {`\udb80\udd69`} Проекты
-          </Link>
-          <Link to={""} className={"button-link"}>
-            {`\udb80\udea4`} GitHub
-          </Link>
+          {data.map((link) => {
+            if (link.type !== "external") {
+              return (
+                <Link to={link.url} className={"button-link"} key={link.url}>
+                  {link.text}
+                </Link>
+              );
+            } else {
+              return (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  className={"button-link"}
+                  key={link.url}
+                >
+                  {link.text}
+                </a>
+              );
+            }
+          })}
         </div>
         <div className={s.hamburger}>
-          <Hamburger />
+          <Hamburger data={data} />
         </div>
       </div>
     </header>
