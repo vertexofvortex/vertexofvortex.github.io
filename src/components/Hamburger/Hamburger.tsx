@@ -26,6 +26,7 @@ export function Hamburger({ data }: Props) {
                   <Link
                     to={link.url}
                     className={"button-link big"}
+                    onClick={() => setIsMenuOpen(false)}
                     key={link.url}
                   >
                     {link.text}
@@ -37,6 +38,7 @@ export function Hamburger({ data }: Props) {
                     href={link.url}
                     target="_blank"
                     className={"button-link big"}
+                    onClick={() => setIsMenuOpen(false)}
                     key={link.url}
                   >
                     {link.text}
