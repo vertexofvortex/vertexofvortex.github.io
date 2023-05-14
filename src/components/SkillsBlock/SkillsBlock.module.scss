@@ -7,8 +7,16 @@
         column-gap: calc(2 * var(--sh));
         row-gap: var(--sv);
 
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 425px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         .more {
             color: var(--vim-vimLineComment);
+            box-shadow: inset 0px 0px 0px 2px var(--vim-StatusLineBg);
             @include paddingsFullEqual;
         }
     }

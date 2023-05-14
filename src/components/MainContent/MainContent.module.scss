@@ -6,5 +6,9 @@ main {
     .content {
         @include contentProps;
         @include paddingsV;
+        
+        @media (max-width: 1200px) {
+            @include paddingsH;
+        }
     }
 }

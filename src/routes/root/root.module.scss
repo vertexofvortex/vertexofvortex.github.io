@@ -1,0 +1,7 @@
+.root {
+  > main {
+    @media (max-width: 426px) {
+      padding-top: calc(3 * var(--sv));
+    }
+  }
+}
