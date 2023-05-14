@@ -28,6 +28,14 @@ export interface IProject {
   };
 }
 
+export interface IContact {
+  text: string;
+  url: string;
+  color: string;
+  background: string;
+}
+
 export interface IContent {
   projects: IProject[];
+  contacts: IContact[];
 }
