@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import s from "./Header.module.scss";
+import { Hamburger } from "..";
 
 export function Header() {
   const location = useLocation();
@@ -13,8 +14,13 @@ export function Header() {
   return (
     <header>
       <div className={s.content}>
-        <div className={s.logo}>
-          <b>vertexofvortex@github.io: {decorateLocation(location.pathname)}</b>
+        <div className={s.prompt}>
+          <div className={s.wrapper}>
+            <span className={s.user}>vertex@github.io:</span>{" "}
+            <span className={s.location}>
+              {decorateLocation(location.pathname)}
+            </span>
+          </div>
         </div>
         <div className={s.links}>
           <Link to={"/"} className={"button-link"}>
@@ -26,6 +32,9 @@ export function Header() {
           <Link to={""} className={"button-link"}>
             {`\udb80\udea4`} GitHub
           </Link>
+        </div>
+        <div className={s.hamburger}>
+          <Hamburger />
         </div>
       </div>
     </header>
