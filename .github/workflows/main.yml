@@ -23,14 +23,14 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
           
-      - name: Copy index.html to 404.html
-        run: cp ./index.html ./404.html 
-          
       - name: Install packages
         run: npm install
         
       - name: Build page
         run: npm run build
+        
+      - name: Copy index.html to 404.html
+        run: cp ./index.html ./404.html 
         
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3.9.3
