@@ -9,6 +9,10 @@
     background: var(--vim-StatusLineBg);
     @include paddingsFullEqual;
 
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
+
     a {
       white-space: pre;
 

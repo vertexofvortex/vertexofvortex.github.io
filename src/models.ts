@@ -35,6 +35,12 @@ export interface IContact {
   background: string;
 }
 
+export interface IHeaderLink {
+  text: string;
+  url: string;
+  type?: "internal" | "external";
+}
+
 export interface IContent {
   projects: IProject[];
   contacts: IContact[];

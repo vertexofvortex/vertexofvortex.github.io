@@ -5,15 +5,41 @@ header {
     background-color: var(--vim-StatusLineFg);
     color: var(--vim-StatusLineBg);
     @include paddingsFull;
+
+    @media (max-width: 426px) {
+        position: fixed;
+    }
     
     .content {
         display: flex;
         justify-content: space-between;
         @include contentProps;
-        
+
+        .prompt {
+            width: fit-content;
+            overflow: hidden;
+            display: flex;
+            justify-content: end;
+            font-weight: bold;
+
+            .wrapper {
+                white-space: pre;
+                padding-right: calc(2 * var(--sh));
+            }
+        }
         .links {
             display: flex;
             gap: calc(2 * var(--sh));
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        .hamburger {
+            margin: calc(-1 * var(--sv)) calc(-1 * var(--sh));
+            @media (min-width: 769px) {
+                display: none;
+            }
         }
     }
 }

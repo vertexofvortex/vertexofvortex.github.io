@@ -4,6 +4,7 @@ import Root from "./routes/root/root";
 import { loadMain } from "./routes/main/main.loader";
 import { loadProjects } from "./routes/projects/projects.loader";
 import { loadProject } from "./routes/project/project.loader";
+import { loadRoot } from "./routes/root/root.loader";
 
 const Main = lazy(() => import("./routes/main/main"));
 const Projects = lazy(() => import("./routes/projects/projects"));
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <Root isError />,
+    loader: loadRoot,
     children: [
       {
         path: "",
