@@ -34,6 +34,12 @@
   }
   .buttons {
     display: flex;
-    gap: calc(2 * var(--sh));
+    flex-wrap: wrap;
+    column-gap: calc(2 * var(--sh));
+    row-gap: var(--sv);
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
   }
 }
