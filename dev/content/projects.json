@@ -1,0 +1,102 @@
+[
+  {
+    "slugId": "vk-rss-parser",
+    "coverUrl": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
+    "title": "VK RSS Parser",
+    "buttons": [
+      {
+        "type": "external",
+        "url": "https://github.com/vertexofvortex/vk-rss-bot",
+        "children": "\udb80\udea2 Репозиторий на GitHub"
+      }
+    ],
+
+    "featuredView": {
+      "description": "Сервис, который позволяет подключить группы со своего аккаунта ВКонтакте и привязать к ним источники RSS-лент, с которых будут опрашиваться новости. Интересующие вас посты затем можно выбрать, отредактировать и опубликовать в группе вместе с красивым сгенерированным сниппетом-картинкой"
+    },
+  
+    "fullView": {
+      "description": "<p>Сервис, который позволяет подключить группы со своего аккаунта ВКонтакте и привязать к ним источники RSS-лент, с которых будут опрашиваться новости. <a href=\"/projects/test\">Рандомная ссылка</a></p><p>Интересующие вас посты затем можно выбрать, отредактировать и опубликовать в группе вместе с красивым сгенерированным сниппетом-картинкой. <a href=\"https://vk.com/\" target=\"_blank\">Рандомная ссылка</a></p>",
+      "galleryPictures": [
+        {
+          "url": "https://raw.githubusercontent.com/vertexofvortex/vk-rss-bot/main/cover.png",
+          "description": "Описание слайда"
+        },
+        {
+          "url": "https://cdn.sstatic.net/Img/teams/teams-illo-free-sidebar-promo.svg?v=47faa659a05e",
+          "description": "Lorem ipsum dolor sit amet 1"
+        },
+        {
+          "url": "https://res.cloudinary.com/practicaldev/image/fetch/s--66pbhi9k--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j50mwr0ltv6h9rgiwl1b.png",
+          "description": "Lorem ipsum dolor sit amet 2"
+        }
+      ]
+    }
+  },
+  {
+    "slugId": "dac",
+    "coverUrl": "/pictures/dac-cover.jpg",
+    "coverVerticalPos": "center",
+    "title": "Digital Assets Capital",
+    "buttons": [
+      {
+        "type": "external",
+        "url": "https://da-capital.io",
+        "children": "\udb81\udd9f Перейти на сайт"
+      }
+    ],
+
+    "featuredView": {
+      "description": "Приватный инвестиционный фонд, в разработке которого я занимался фронтендом сайта, а также помогал латать дыры в API"
+    },
+  
+    "fullView": {
+      "description": "Приватный инвестиционный фонд, в разработке которого я занимался фронтендом сайта, а также помогал латать дыры в API",
+      "galleryPictures": [
+        {
+          "url": "/pictures/dac-g-1.png",
+          "description": "Показать больше, к сожалению, не представляется возможным"
+        }
+      ]
+    }
+  },
+  {
+    "slugId": "project-armor",
+    "coverUrl": "/pictures/project-armor-cover.jpg",
+    "coverVerticalPos": "center",
+    "title": "Project Armor",
+    "buttons": [
+      {
+        "type": "external",
+        "url": "https://project-armor.io",
+        "children": "\udb81\udd9f Перейти на сайт"
+      }
+    ],
+
+    "featuredView": {
+      "description": "Польская киберспортивная организация, имеет свой состав по различным играм, а также занимается проектами в сфере криптоиндустрии и NFT. Я занимался разработкой их веб-сайта"
+    },
+  
+    "fullView": {
+      "description": "Польская киберспортивная организация, имеет свой состав по различным играм, а также занимается проектами в сфере криптоиндустрии и NFT. Я занимался разработкой их веб-сайта",
+      "galleryPictures": [
+        {
+          "url": "/pictures/project-armor-g-1.png",
+          "description": "Главная страница"
+        },
+        {
+          "url": "/pictures/project-armor-g-2.png",
+          "description": "Магазин"
+        },
+        {
+          "url": "/pictures/project-armor-g-3.png",
+          "description": "Страница игровой команды"
+        },
+        {
+          "url": "/pictures/project-armor-g-4.png",
+          "description": "Раздел партнёров"
+        }
+      ]
+    }
+  }
+]
