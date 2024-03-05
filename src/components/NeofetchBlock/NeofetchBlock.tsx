@@ -2,8 +2,9 @@ import { Section } from "..";
 import s from "./NeofetchBlock.module.scss";
 
 export function NeofetchBlock() {
-  const dateBirth = new Date(1017230400000);
+  const dateBirth = new Date(2002, 2, 27, 12);
   const dateNow = new Date();
+  const dateDiff = dateNow.valueOf() - dateBirth.valueOf();
 
   return (
     <Section className={s.neofetch} promptCommand={"neofetch"}>
@@ -20,7 +21,7 @@ export function NeofetchBlock() {
           <span className={s.colored}>Kernel</span>: 5.10.102.1
           <br />
           <span className={s.colored}>Uptime</span>:{" "}
-          {dateNow.getFullYear() - dateBirth.getFullYear()} years
+          {Math.floor(dateDiff / (1000 * 3600 * 24 * 365.25))} years
           <br />
           <span className={s.colored}>Packages</span>: 5948 (pacman)
           <br />
