@@ -4,6 +4,7 @@ import {
   MainContent,
   NeofetchBlock,
   ProjectsBlock,
+  SEO,
   SkillsBlock,
   WhoamiBlock,
 } from "../../components";
@@ -14,6 +15,10 @@ function Main() {
 
   return (
     <MainContent>
+      <SEO
+        title="vertex@github.io"
+        description="Yet another web developer's website"
+      />
       <NeofetchBlock />
       <WhoamiBlock />
       <SkillsBlock />
