@@ -13,3 +13,4 @@ export { ASCIITitle } from "./ASCIITitle/ASCIITitle";
 export { Title } from "./Title/Title";
 export { ContactsBlock } from "./ContactsBlock/ContactsBlock";
 export { Hamburger } from "./Hamburger/Hamburger";
+export { SEO } from "./SEO/SEO";
