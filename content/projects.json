@@ -100,5 +100,34 @@
         }
       ]
     }
+  },
+  {
+    "slugId": "sovietgirls",
+    "coverUrl": "/pictures/sovietgirls.webp",
+    "coverVerticalPos": "top",
+    "title": "Soviet Girls Website",
+    "buttons": [
+      {
+        "type": "external",
+        "url": "https://sovietgirls.su/",
+        "children": "\udb81\udd9f Перейти на сайт"
+      },
+      {
+        "type": "external",
+        "url": "https://vk.com/sovietgirls_nft",
+        "children": "\uf189 Группа ВКонтакте"
+      },
+      {
+        "type": "external",
+        "url": "https://github.com/vertexofvortex/sovietgirls-website",
+        "children": "\udb80\udea2 Репозиторий на GitHub"
+      }
+    ],
+    "featuredView": {
+      "description": "Уникальная NFT-коллекция из 300 советских аниме-девушек"
+    },
+    "fullView": {
+      "description": "Простенький одностраничный веб-сайт для NFT коллекции моего хорошего друга. Сделан за пару часов на коленке, но зато с душой! Кстати, можете перейти по ссылкам внизу и посмотреть коллекцию"
+    }
   }
 ]
